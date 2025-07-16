@@ -1,0 +1,5 @@
+# Require maintainers or reviewers or core developers to review all PRs
+* @Sasstify-AI-Research/maintainers @Sasstify-AI-Research/reviewers @Sasstify-AI-Research/core-devs
+
+# Admins should own all CI and project configuration files
+/.github/ @Sasstify-AI-Research/admins
