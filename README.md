@@ -227,4 +227,6 @@ Install project dependencies using npm or Yarn.
   Create new shadcn-based components in the src/components/ui directory.
   Follow shadcn’s patterns for accessibility and styling to ensure consistency.
 
-- 💡 **Feel free to create a Pull Request** for new ideas, improvements, or enhancements—your contributions are welcome!
+## Contribute
+
+**Feel free to create a Pull Request** for new ideas, improvements, or enhancements—your contributions are welcome!
