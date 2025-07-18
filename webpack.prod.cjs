@@ -7,15 +7,6 @@ const TerserPlugin = require("terser-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const copyPluginInstance = new CopyWebpackPlugin({
-    patterns: [
-      {
-        from: path.resolve(__dirname, 'dist/index.html'),
-        to: path.resolve(__dirname, 'dist/dashboard/index.html'),
-      },
-    ],
-  });
-
 module.exports = {
     mode: 'production',
     target: 'web',
@@ -66,16 +57,21 @@ module.exports = {
             filename: 'index.html',
             inject: 'body'
         }),
-        new MiniCssExtractPlugin({
-            filename: "static/css/[name].min.css",
+        new htmlWebpackPlugin({
+            template: 'index.webpack.html',
+            chunks: ['index'],
+            filename: 'dashboard/index.html',
+            inject: 'body'
         }),
-        {
-            apply: (compiler) => {
-              compiler.hooks.afterEmit.tap('CopyAfterEmit', (compilation) => {
-                copyPluginInstance.apply(compiler);
-              });
-            }
-          }
+        new MiniCssExtractPlugin({
+            filename: "static/css/[name].[contenthash].min.css",
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+              { from: 'public/robots.txt', to: 'robots.txt' },
+              { from: 'public/favicon.ico', to: 'favicon.ico' },
+            ],
+          }),
         //new BundleAnalyzerPlugin()
     ],
     performance: {
@@ -108,6 +104,25 @@ module.exports = {
                     chunks: "all",
                     enforce: true,
                 },
+                // Extract global.css into a common chunk
+                globalStyles: {
+                    name: 'global',
+                    test: (module, chunks) =>
+                        module.type === 'css/mini-extract' &&
+                        module.identifier().includes('global.css'),
+                    chunks: 'all',
+                    enforce: true,
+                    priority: 20,
+                },
+                styles: {
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true,
+                    priority: 10,
+                    name: 'styles', // Output as styles.[hash].js
+                    reuseExistingChunk: true, // Reuse existing styles chunks
+                }
+
             }
         },
         minimize: true,
@@ -125,5 +140,6 @@ module.exports = {
             new CssMinimizerPlugin(), // Minifies CSS
         ],
         usedExports: true, // Enable tree shaking
-    }
+    },
+    devtool: false
 };
