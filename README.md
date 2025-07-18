@@ -1,5 +1,20 @@
 # sasstify-frontend-template
-React + Tailwind + Shadcn + TypeScript + Vite + Webpack template for building modern SaaS frontends
+
+Sasstify frontend template is a purpose-built frontend template designed to seamlessly transform Loveable Dev’s AI-generated code into a production-ready static web app — optimized for lightning-fast deployment, scalability, and simplicity.
+
+This project exists to bridge the gap between automated code generation and real-world productization by offering:
+
+📦 Static hosting compatibility — no dependency on Node/Express servers
+
+🧱 Clean, component-based architecture — built for scaling product features
+
+⚡️ Optimized performance — smart code-splitting, CSS purging, and caching
+
+🛡️ Best-practice build setup — TypeScript, Webpack 5, Tailwind CSS ready
+
+🌐 Production-focused — minimal backend, maximum speed
+
+Whether you're shipping MVPs or full-scale products, Sasstify frontent template helps you go from prompt to product with confidence.
 
 ## 📦 Tech Stack
 
@@ -62,11 +77,6 @@ Webpack is used for **production builds** with the following setup:
   - Static images: moved to `static/images/`
   - CSS: moved to `static/css/`
   - JS: moved to `static/js/`
-
-### 🧱 Directory Copying
-This copies the built index.html to dashboard/index.html, enabling client-side routes like /dashboard to be statically served — useful for deployment on platforms like Netlify, GitHub Pages, or Vercel without needing server-side rewrites.
-
-✅ Advantage: Reduces deployment cost by eliminating backend dependency for routing fallback.
 
 ## 📁 Project Structure
 ### Project Structure

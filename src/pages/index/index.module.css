@@ -1,0 +1,7 @@
+.btn {
+    @apply bg-blue-500 text-white;
+}
+
+.btn-red {
+    @apply bg-red-700;
+}
