@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal documentation (not for public GitHub)
+.archive/
+
+# Obfuscation cache
+.vite-cache/

@@ -1,13 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-
-interface LayoutProps {
-  children: ReactNode;
-  fixedHeader?: boolean;
-  desktopMenuItems?: ReactNode;
-  mobileMenuItems?: ReactNode;
-}
+import { LayoutProps } from './Layout.types';
 
 const Layout: React.FC<LayoutProps> = ({ children, fixedHeader, desktopMenuItems, mobileMenuItems}) => {
   return (

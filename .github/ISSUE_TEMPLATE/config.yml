@@ -1,0 +1,18 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Sasstify-AI-Research/sasstify-frontend-template/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📖 Documentation
+    url: https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/README.md
+    about: Read the complete documentation
+  - name: 🚀 Quick Start Guide
+    url: https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/quick-start/README.md
+    about: Get started with the template
+  - name: 🐛 Troubleshooting
+    url: https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/quick-start/06-troubleshooting.md
+    about: Common issues and solutions
+  - name: 📧 Email Support
+    url: mailto:software-engineer-404@sasstify.com
+    about: Contact for private matters or support inquiries
+

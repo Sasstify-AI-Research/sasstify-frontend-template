@@ -2,14 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import "../../../public/styles/global.css";
-import { Link } from "react-router-dom";
-
-interface HeaderProps {
-  fixedHeader?: boolean;
-  pageName?: string;
-  desktopMenuItems?: React.ReactNode;
-  mobileMenuItems?: React.ReactNode;
-}
+import { HeaderProps } from './Header.types';
 
 const Header: React.FC<HeaderProps> = ({ fixedHeader = false, pageName = "Sasstify AI", desktopMenuItems, mobileMenuItems }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,13 +36,13 @@ const Header: React.FC<HeaderProps> = ({ fixedHeader = false, pageName = "Sassti
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2">
 
-            <Link
-              to="/"
+            <a
+              href="/"
               className="text-xl font-bold tracking-tight hover:opacity-80 hover:cursor-pointer transition-opacity flex items-center gap-2"
             >
               <Terminal size={20} />
               {pageName}
-            </Link>
+            </a>
 
           </div>
 

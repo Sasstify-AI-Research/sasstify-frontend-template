@@ -1,14 +1,30 @@
 {
-  "name": "sasstify-frontend-template",
-  "private": true,
+  "name": "exit",
   "version": "1.0.0",
+  "private": true,
+  "description": "Sasstify frontend template is a purpose-built frontend template designed to seamlessly transform Loveable Dev’s AI-generated code into a production-ready static web app — optimized for lightning-fast deployment, scalability, and simplicity.",
+  "homepage": "https://github.com/Sasstify-AI-Research/sasstify-frontend-template#readme",
+  "bugs": {
+    "url": "https://github.com/Sasstify-AI-Research/sasstify-frontend-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sasstify-AI-Research/sasstify-frontend-template.git"
+  },
+  "license": "MIT",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
-    "build": "webpack --config webpack.prod.cjs",
+    "build": "vite build && node scripts/post-build.js",
+    "build:clean": "rm -rf .vite-cache dist && vite build && node scripts/post-build.js",
+    "build:analyze": "ANALYZE=true vite build && node scripts/post-build.js",
+    "create:page": "node scripts/create-page.js",
+    "delete:page": "node scripts/delete-page.js",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
-    "preview": "npm run build && serve -s dist -l 8080"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.83.0",
@@ -18,47 +34,31 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.3",
     "tailwind-merge": "^3.3.1",
     "tailwind-variants": "^1.0.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.0",
-    "@babel/preset-env": "^7.28.0",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^9.30.1",
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^24.10.1",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.21",
-    "babel-loader": "^10.0.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^13.0.0",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.2",
     "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "glob-all": "^3.3.1",
     "globals": "^16.3.0",
-    "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.5.6",
-    "postcss-loader": "^8.1.1",
-    "purgecss-webpack-plugin": "^7.0.2",
-    "serve": "^14.2.4",
-    "style-loader": "^4.0.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "tailwindcss": "^3.4.17",
-    "terser-webpack-plugin": "^5.3.14",
+    "terser": "^5.44.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4",
-    "webpack": "^5.100.1",
-    "webpack-bundle-analyzer": "^4.10.2",
-    "webpack-cli": "^6.0.1"
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-javascript-obfuscator": "^3.1.0"
   }
 }

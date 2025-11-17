@@ -1,242 +1,235 @@
-# sasstify-frontend-template
+# Sasstify Frontend Template ⚡
 
-Sasstify frontend template is a purpose-built frontend template designed to seamlessly transform Loveable Dev’s AI-generated code into a production-ready static web app — optimized for lightning-fast deployment, scalability, and simplicity.
+**A production-ready Multi-Page Application (MPA) template powered by Vite 7**
 
-This project exists to bridge the gap between automated code generation and real-world productization by offering:
+**Optimized for lightning-fast development, smart code splitting, and lazy loading**
 
-📦 Static hosting compatibility — no dependency on Node/Express servers
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](.)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](.)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](.)
+[![Vite](https://img.shields.io/badge/Vite-7-purple.svg)](.)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-🧱 Clean, component-based architecture — built for scaling product features
+---
 
-⚡️ Optimized performance — smart code-splitting, CSS purging, and caching
+## Table of Contents
 
-🛡️ Best-practice build setup — TypeScript, Webpack 5, Tailwind CSS ready
+- [Quick Start](#quick-start)
+- [Key Features](#key-features)
+- [Available Commands](#available-commands)
+- [Project Structure](#project-structure)
+- [What Makes This Special?](#what-makes-this-special)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Support & Links](#support--links)
 
-🌐 Production-focused — minimal backend, maximum speed
+---
 
-Whether you're shipping MVPs or full-scale products, Sasstify frontent template helps you go from prompt to product with confidence.
+## Quick Start
 
-## 📦 Tech Stack
+```bash
+# Clone the repository
+git clone https://github.com/Sasstify-AI-Research/sasstify-frontend-template.git
 
-This template uses a hybrid approach: **Vite** for development (fast dev server, HMR) and **Webpack** for production (advanced optimization and control).
+# Navigate to project directory
+cd sasstify-frontend-template
 
-### 🧱 Core Libraries
+# Install dependencies
+npm install
 
-- **React 19** – Declarative UI framework
-- **React DOM** – DOM rendering for React
-- **React Router v7** – Routing and layout support
-- **TypeScript** – Static typing for large-scale apps
+# Start development server (instant!)
+npm run dev
 
-### 🎨 Styling
+# Open http://localhost:8080
+```
 
-- **Tailwind CSS** – Utility-first CSS framework
-- **@tailwindcss/typography** – Typography plugin
-- **tailwindcss-animate** – Pre-built utility animations
-- **tailwind-variants** – Component-level styling utilities
-- **tailwind-merge** – Merges Tailwind class conflicts
-- **clsx** & **class-variance-authority** – Conditional class management
+---
 
-### 💡 UI Components & Icons
+## Key Features
 
-- **Lucide React** – Lightweight, consistent icon set
-- **React Icons** – Access to popular icon libraries
+### ⚡ Ultra-Fast Development
+- **Dev Server:** Starts in **299ms** (near-instant!)
+- **Hot Module Replacement:** <100ms updates
+- **Production Build:** **1-4 seconds** (90% faster than Webpack)
 
-### 🔌 State & Data
+### 🎯 Production-Ready
+- **Multi-Page Architecture:** No special server config needed (works on any static host)
+- **Smart Code Splitting:** Automatic vendor chunking with lazy loading
+- **Viewport-Based Lazy Loading:** Content loads when scrolled into view
+- **Modern Tooling:** React 19 + TypeScript 5.8 + Vite 7
+- **Optimized Build:** Content-hashed assets with intelligent caching
 
-- **@tanstack/react-query** – Async data management and caching
+**[→ See performance metrics & bundle analysis](./docs/performance-optimization-guide/)**
 
-### ⚙️ Tooling
+### 📦 Tech Stack
 
-- **Vite** – Fast dev server and HMR
-- **Webpack 5** – Advanced production bundler
-- **Babel** – JavaScript and TypeScript transpilation
-- **ESLint** – Static code analysis
-- **TypeScript ESLint** – Type-aware linting
-- **Terser** – JavaScript minification
-- **CSS Minimizer Plugin** – CSS optimization
-- **Mini CSS Extract Plugin** – CSS extraction from JS
-- **HTML Webpack Plugin** – Template injection
-- **Copy Webpack Plugin** – Asset copying
-- **PurgeCSS** – Unused CSS removal
+| Layer | Technology | Version |
+|-------|-----------|---------|
+| **Frontend** | React | 19.1.0 |
+| **Language** | TypeScript | 5.8.3 |
+| **Build Tool** | Vite | 7.0.4 |
+| **Architecture** | Multi-Page App (MPA) | - |
+| **State** | TanStack Query | 5.83.0 |
+| **Styling** | Tailwind CSS | 3.4.17 |
+| **Icons** | Lucide React | 0.525.0 |
 
-## ⚙️ Webpack Configuration Overview
+---
 
-Webpack is used for **production builds** with the following setup:
+## Available Commands
 
-### ✨ Highlights
+```bash
+# Development
+npm run dev              # Start dev server at http://localhost:8080
+npm run create:page      # 🤖 Create new page (automated CLI)
+npm run delete:page      # 🗑️ Delete existing page (automated CLI)
 
-- **Single Entry Point**: Uses `main.tsx` for bundling everything.
-- **Output Splitting**: Automatically separates `header`, `footer`, and `ui` components via `splitChunks`.
-- **Tree Shaking**: Unused exports are removed.
-- **Code Minification**:
-  - `TerserPlugin` removes console logs and comments.
-  - `CssMinimizerPlugin` compresses Tailwind and other styles.
-- **Performance Budget**: Warns if an entrypoint exceeds 244KB to ensure SaaS frontend performance.
-- **HTML Generation**: Injects bundles into `index.html` using `html-webpack-plugin`.
-- **Asset Handling**:
-  - Static images: moved to `static/images/`
-  - CSS: moved to `static/css/`
-  - JS: moved to `static/js/`
+# Production
+npm run build            # Build for production (1-4 seconds!)
+npm run preview          # Preview production build locally
 
-## 📁 Project Structure
-### Project Structure
+# Analysis
+npm run build:analyze    # Build + open bundle analyzer
 
-- **CODE_OF_CONDUCT.md**  
-  Guidelines and rules for contributing to the project.
+# Code Quality
+npm run lint             # Run ESLint
+npm run type-check       # Run TypeScript type checking
+```
 
-- **LICENSE**  
-  The license file (e.g., MIT, Apache 2.0) specifying terms of use.
+---
 
-- **README.md**  
-  This documentation file explaining the project.
+## Project Structure
 
-- **components.json**  
-  Configuration or metadata related to UI components.
+```
+sasstify-frontend-template/
+├── src/
+│   ├── components/       # Reusable components (Layout, Header, Footer, Section)
+│   ├── pages/            # Multi-page application
+│   │   ├── index/        # Index page with index.html + main.tsx + Index.tsx
+│   │   └── dashboard/    # Dashboard page with index.html + main.tsx + Dashboard.tsx
+│   ├── hooks/            # Custom React hooks (useSectionNavigation, use-mobile)
+│   └── utils/            # Utility functions (smoothScroll)
+├── public/               # Static assets & global CSS
+├── scripts/              # Build scripts (create-page, delete-page, post-build)
+├── docs/                 # Complete documentation
+├── changelog/            # Release notes and version history
+├── vite.config.ts        # Vite configuration
+└── package.json          # Dependencies and scripts
+```
 
-- **eslint.config.js**  
-  Configuration for ESLint, the JavaScript/TypeScript linter.
+**[→ See detailed structure guide](./docs/quick-start/02-project-structure.md)**
 
-- **index.html**  
-  The main HTML template used by Vite for development.
+---
 
-- **index.webpack.html**  
-  HTML template used by Webpack for production builds.
+## What Makes This Special?
 
-- **node_modules/**  
-  Folder containing all installed npm dependencies.
+### Smart Code Splitting & Caching
+- Automatic vendor chunking separates React and libraries for optimal caching
+- Page-specific code loads only when needed
+- Content-hashed filenames ensure perfect cache efficiency
 
-- **package.json**  
-  Lists dependencies, scripts, and project metadata.
+### Three Lazy Loading Patterns
+1. **Component-Level:** Load components on user interaction (buttons, modals)
+2. **Viewport-Based:** Load content when scrolled into view (sections)
+3. **Route-Based:** Each MPA page loads independently
 
-- **package-lock.json**  
-  Automatically generated lock file to ensure consistent installs.
+**[→ See lazy loading patterns with examples](./docs/reusable-implementations/lazy-loading/)**
 
-- **postcss.config.js**  
-  Configuration for PostCSS plugins used in CSS processing.
+### Developer Experience
+- Instant dev server start (~300ms) with Hot Module Replacement
+- Full TypeScript support with strict mode
+- Automated page creation CLI (`npm run create:page`)
+- Built-in component library with hooks and utilities
 
-- **public/**  
-  Static assets served directly without processing.
+**[→ See complete feature list & performance metrics](./docs/performance-optimization-guide/)**
 
-- **tailwind.config.ts**  
-  Configuration file for Tailwind CSS customization.
+---
 
-- **tsconfig.app.json**  
-  TypeScript configuration for the application source code.
+## Documentation
 
-- **tsconfig.json**  
-  Base TypeScript configuration shared across the project.
-
-- **tsconfig.node.json**  
-  TypeScript configuration specifically for Node.js environment.
-
-- **vite.config.ts**  
-  Configuration for the Vite build tool used during development.
-
-- **webpack.prod.cjs**  
-  Webpack configuration file for production builds.
-
-- **src/**  
-  Main source folder containing application code:
-  - **App.tsx**  
-    Root React component of the application.
-  - **main.tsx**  
-    Entry point file that bootstraps the React app.
-  - **vite-env.d.ts**  
-    TypeScript environment declarations for Vite.
-  - **components/**  
-    Folder containing reusable React UI components.
-  - **pages/**  
-    Folder containing page-level components or views.
-  - **hooks/**  
-    Custom React hooks used throughout the app.
-  - **lib/**  
-    Utility functions and libraries for the application.
-
-## Getting Started
-
-- ### Clone the Repository
-  Clone the Sasstify frontend IDE repository to your local machine and navigate to the project directory.
-
-   ```
-     git clone https://github.com/Sasstify-AI-Research/sasstify-frontend-template.git
-     cd sasstify-frontend-template
-   ```
-
-- ### Install Dependencies
-  Ensure Node.js is installed (recommended version: v18 or higher).
-Install project dependencies using npm or Yarn.
-    ```
-     npm install
-    ```
-- ### Run the Development Server
-  Start the Vite development server for fast live reloading.
-  ```
-  npm run dev
-  ```
-  The application will be available at http://localhost:8080.
-
-
-- ### Build for Production
-
-  Create an optimized production build using Webpack.
-  ```
-   npm run build
-  ```
-  The output will be generated in the dist folder.
-
-
-- ### Preview the Production Build
-
-  Preview the production build locally after building.
-  ```
-    npm run preview
-  ```
-## Adding and Using shadcn UI Components
-
-- ### Overview
-
-  The project uses shadcn UI components built on Radix UI and Tailwind CSS for accessible and visually appealing UI elements.
-
-- ### Install shadcn Components
-
-  If not already installed, add shadcn UI packages using npx
-  ```
-  npx shadcn@latest add accordion
-  ```
-- ### Import Components
-
-  Import shadcn components into your React files from the src/components folder.
-
-  ```
-   import {
-     Accordion,
-     AccordionContent,
-     AccordionItem,
-     AccordionTrigger,
-   } from "@/components/ui/accordion"
-  ```
-
-- ### Use Components in JSX
-
-  Integrate components into your JSX code.
-  ```
-   <Accordion type="single" collapsible>
-     <AccordionItem value="item-1">
-      <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-     </AccordionItem>
-    </Accordion>
-  ```
-- ### Customize Styles
-  Use Tailwind CSS utility classes along with tailwind-variants or tailwind-merge packages to compose or override styles efficiently.
-
-
-- ### Add New Components
-  Create new shadcn-based components in the src/components/ui directory.
-  Follow shadcn’s patterns for accessibility and styling to ensure consistency.
-
-## Contribute
-
-**Feel free to create a Pull Request** for new ideas, improvements, or enhancements—your contributions are welcome!
+### Complete Documentation
+
+All documentation is in the [`docs/`](./docs/) folder:
+
+| Category | Guide | Description |
+|----------|-------|-------------|
+| **Getting Started** | [Quick Start](./docs/quick-start/) | Install, build & deploy in 5 minutes |
+| **Build System** | [Production Build](./docs/production-build/) | Complete build pipeline guide |
+| **Page Management** | [Create Page](./docs/scripts/01-CREATE_PAGE.md) | Automated page creation (CLI) |
+| **Components** | [Component Library](./docs/reusable-implementations/) | Reusable components, hooks & utils |
+| **Performance** | [Optimization Guide](./docs/performance-optimization-guide/) | Performance best practices |
+| **Scripts** | [NPM Scripts](./docs/scripts/) | All automation & workflows |
+
+**[📖 Complete documentation index →](./docs/README.md)**
+
+---
+
+## Contributing
+
+We welcome contributions! See our **[Contributing Guide](./docs/contributing/)** for details on:
+
+- **[Git Workflow](./docs/contributing/01-git-workflow.md)** - Fork, clone, branch & commit
+- **[Commit Conventions](./docs/contributing/02-commit-conventions.md)** - Write clear commit messages
+- **[Pull Request Process](./docs/contributing/03-pull-request-process.md)** - Submit & review PRs
+- **[Code Review](./docs/contributing/04-code-review.md)** - Review standards & expectations
+
+**Report Issues:**
+- 🐛 [Bug Report Template](./docs/contributing/templates/bug-report.md)
+- ✨ [Feature Request Template](./docs/contributing/templates/feature-request.md)
+
+**Legal:**
+- [Contributor License Agreement](./CONTRIBUTOR_LICENSE_AGREEMENT.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+
+---
+
+## License
+
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+Built with:
+- [React](https://react.dev/) - UI library
+- [Vite](https://vitejs.dev/) - Build tool
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+- [TanStack Query](https://tanstack.com/query) - Data fetching
+
+---
+
+## Support & Links
+
+### Documentation
+- 📖 **[Complete Documentation](./docs/README.md)** - Full guides & references
+- 🚀 **[Quick Start Guide](./docs/quick-start/)** - Get started in 5 minutes
+- 🔧 **[Build Guide](./docs/production-build/)** - Production build pipeline
+- ⚡ **[Performance Guide](./docs/performance-optimization-guide/)** - Optimization tips
+
+### Project Management
+- 🗺️ **[Roadmap](./ROADMAP.md)** - Future plans and feature timeline
+- 📋 **[Changelog](./changelog/)** - Release history and changes
+
+### Community
+- 🐛 **[Report Issues](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/issues)** - Bug reports & feature requests
+- 💬 **[Discussions](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/discussions)** - Ask questions & share ideas
+- 🤝 **[Contributing Guide](./docs/contributing/)** - How to contribute
+
+### Contact
+- 📧 **For support, help, complaints, or legal queries:** [software-engineer-404@sasstify.com](mailto:software-engineer-404@sasstify.com)
+
+---
+
+## Star This Repository
+
+If you find this template helpful, please consider giving it a star! It helps others discover the project.
+
+---
+
+**Made with ❤️ by Sasstify AI Research**
+
+**Last Updated:** November 14, 2025  
+**Status:** Production Ready ✅
