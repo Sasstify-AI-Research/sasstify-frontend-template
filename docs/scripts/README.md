@@ -33,6 +33,20 @@ Complete guide to all npm scripts and automation tools in this project.
   "build:analyze": "ANALYZE=true vite build && node scripts/post-build.js",
   "create:page": "node scripts/create-page.js",
   "delete:page": "node scripts/delete-page.js",
+  "create:component": "node scripts/create-component.js",
+  "delete:component": "node scripts/delete-component.js",
+  "create:ui-component": "node scripts/create-ui-component.js",
+  "delete:ui-component": "node scripts/delete-ui-component.js",
+  "create:block": "node scripts/create-block.js",
+  "delete:block": "node scripts/delete-block.js",
+  "analyze:components": "node scripts/analyze-components.js",
+  "analyze:blocks": "node scripts/analyze-blocks.js",
+  "analyze:ui-components": "node scripts/analyze-ui-components.js",
+  "analyze:pages": "node scripts/analyze-pages.js",
+  "analyze:deps": "node scripts/analyze-deps.js",
+  "add:shadcn": "node scripts/add-shadcn-component.js",
+  "manage:registry": "node scripts/manage-shadcn-registry.js",
+  "list:registry": "node scripts/list-registry-components.js",
   "lint": "eslint .",
   "type-check": "tsc --noEmit",
   "preview": "vite preview"
@@ -45,9 +59,23 @@ Complete guide to all npm scripts and automation tools in this project.
 
 | Script | Purpose | Documentation |
 |--------|---------|---------------|
-| [create-page.js](#npm-run-createpage) | Create new MPA page | [Complete Guide →](./01-CREATE_PAGE.md) |
-| [delete-page.js](#npm-run-deletepage) | Delete existing MPA page | [Complete Guide →](./02-DELETE_PAGE.md) |
-| [post-build.js](./03-POST_BUILD.md) | Post-build directory restructuring | (runs automatically) |
+| [post-build.js](./01-POST_BUILD.md) | Post-build directory restructuring | (runs automatically) |
+| [create-page.js](#npm-run-createpage) | Create new MPA page | [Complete Guide →](./02-CREATE_PAGE.md) |
+| [delete-page.js](#npm-run-deletepage) | Delete existing MPA page | [Complete Guide →](./03-DELETE_PAGE.md) |
+| [create-component.js](#npm-run-createcomponent) | Create regular component | [Complete Guide →](./04-CREATE_COMPONENT.md) |
+| [delete-component.js](#npm-run-deletecomponent) | Delete regular component | [Complete Guide →](./05-DELETE_COMPONENT.md) |
+| [create-ui-component.js](#npm-run-createuicomponent) | Create UI component | [Complete Guide →](./06-CREATE_UI_COMPONENT.md) |
+| [delete-ui-component.js](#npm-run-deleteuicomponent) | Delete UI component | [Complete Guide →](./07-DELETE_UI_COMPONENT.md) |
+| [create-block.js](#npm-run-createblock) | Create block component | [Complete Guide →](./14-CREATE_BLOCK.md) |
+| [delete-block.js](#npm-run-deleteblock) | Delete block component | [Complete Guide →](./15-DELETE_BLOCK.md) |
+| [add-shadcn-component.js](#npm-run-addshadcn) | Add & adapt shadcn component | [Complete Guide →](./12-ADD_SHADCN_COMPONENT.md) |
+| [manage-shadcn-registry.js](#npm-run-manageregistry) | Manage shadcn registries | [Complete Guide →](./16-MANAGE_SHADCN_REGISTRY.md) |
+| [list-registry-components.js](#npm-run-listregistry) | List registry components | [Complete Guide →](./17-LIST_REGISTRY_COMPONENTS.md) |
+| [analyze-pages.js](#npm-run-analyzepages) | Analyze pages | [Complete Guide →](./08-ANALYZE_PAGES.md) |
+| [analyze-components.js](#npm-run-analyzecomponents) | Analyze regular components | [Complete Guide →](./09-ANALYZE_COMPONENTS.md) |
+| [analyze-blocks.js](#npm-run-analyzeblocks) | Analyze block components | [Complete Guide →](./10-ANALYZE_BLOCKS.md) |
+| [analyze-ui-components.js](#npm-run-analyzeuicomponents) | Analyze UI components | [Complete Guide →](./13-ANALYZE_UI_COMPONENTS.md) |
+| [analyze-deps.js](#npm-run-analyzedeps) | Analyze NPM dependencies | [Complete Guide →](./11-ANALYZE_DEPS.md) |
 | [cached-obfuscation-plugin.js](./obfuscation/README.md) | Cached obfuscation system | (runs automatically) |
 
 ---
@@ -197,7 +225,7 @@ VITE v7.0.4  ready in 299 ms
 
 **Time saved:** 15-30 minutes per page
 
-**[→ Complete guide](./01-CREATE_PAGE.md)**
+**[→ Complete guide](./02-CREATE_PAGE.md)**
 
 ---
 
@@ -207,7 +235,155 @@ VITE v7.0.4  ready in 299 ms
 
 **Time saved:** 10-15 minutes per page
 
-**[→ Complete guide](./02-DELETE_PAGE.md)**
+**[→ Complete guide](./03-DELETE_PAGE.md)**
+
+---
+
+## Component Management
+
+### `npm run create:component`
+
+**Purpose:** Create new component with types and tests
+
+**Time saved:** 10-15 minutes per component
+
+**Features:**
+- ✅ Interactive or CLI mode
+- ✅ Regular or UI component types
+- ✅ Automatic TypeScript types
+- ✅ Automatic unit test generation
+- ✅ Duplicate detection
+
+**[→ Complete guide](./04-CREATE_COMPONENT.md)**
+
+---
+
+### `npm run add:shadcn`
+
+**Purpose:** Add and adapt shadcn/ui components to project structure
+
+**Time saved:** 10-15 minutes per component
+
+**Features:**
+- ✅ Wraps `npx shadcn@latest add`
+- ✅ Automatic type extraction to separate file
+- ✅ CSS module generation (if styles detected)
+- ✅ Folder structure reorganization
+- ✅ Test file generation
+- ✅ Repository selection support (CLI args or interactive)
+
+**[→ Complete guide](./12-ADD_SHADCN_COMPONENT.md)**
+
+---
+
+### `npm run delete:component`
+
+**Purpose:** Delete existing component safely
+
+**Time saved:** 5-10 minutes per component
+
+**Features:**
+- ✅ Usage analysis before deletion
+- ✅ Cascade deletion of child components
+- ✅ Automatic test file cleanup
+- ✅ NPM dependency cleanup
+
+**[→ Complete guide](./05-DELETE_COMPONENT.md)**
+
+---
+
+## Analysis Scripts
+
+### `npm run analyze:components`
+
+**Purpose:** Analyze shared components in `src/components/`
+
+**Features:**
+- ✅ Component dependency tracking
+- ✅ Component relationship mapping
+- ✅ Orphan component detection
+- ✅ Page usage analysis
+- ✅ JSON export support
+
+**[→ Complete guide](./09-ANALYZE_COMPONENTS.md)**
+
+---
+
+### `npm run analyze:pages`
+
+**Purpose:** Analyze pages in `src/pages/`
+
+**Features:**
+- ✅ Page dependency tracking
+- ✅ Component usage per page
+- ✅ UI component tracking
+- ✅ JSON export support
+
+**[→ Complete guide](./08-ANALYZE_PAGES.md)**
+
+---
+
+### `npm run analyze:components`
+
+**Purpose:** Analyze all shared components in `src/components/`
+
+**Features:**
+- ✅ Component dependency tracking
+- ✅ Component-to-component relationships
+- ✅ Page usage tracking
+- ✅ Orphan component detection
+- ✅ JSON export support
+
+**[→ Complete guide](./09-ANALYZE_COMPONENTS.md)**
+
+---
+
+### `npm run analyze:blocks`
+
+**Purpose:** Analyze block components in `src/components/blocks/`
+
+**Features:**
+- ✅ Block dependency tracking
+- ✅ UI component usage per block
+- ✅ Block-to-component relationships
+- ✅ Page usage tracking
+- ✅ Orphan block detection
+- ✅ JSON export support
+
+**[→ Complete guide](./10-ANALYZE_BLOCKS.md)**
+
+---
+
+### `npm run analyze:ui-components`
+
+**Purpose:** Analyze UI components in `src/components/ui/`
+
+**Features:**
+- ✅ UI component dependency tracking
+- ✅ UI component-to-UI component relationships
+- ✅ Block-to-UI component relationships
+- ✅ Page usage tracking
+- ✅ Orphan UI component detection
+- ✅ JSON export support
+
+**[→ Complete guide](./13-ANALYZE_UI_COMPONENTS.md)**
+
+---
+
+### `npm run analyze:deps`
+
+**Purpose:** Analyze NPM dependencies from `package.json`
+
+**Features:**
+- ✅ Used/unused dependency detection
+- ✅ Usage location tracking
+- ✅ Protected dependency identification
+- ✅ Cleanup suggestions
+- ✅ JSON export support
+
+**[→ Complete guide](./11-ANALYZE_DEPS.md)**
+
+---
 
 ---
 
@@ -300,6 +476,8 @@ npm run build  # Build first
 | `preview` | ~100ms | Prod server |
 | `create:page` | ~10s | New page |
 | `delete:page` | ~5s | Remove page |
+| `create:component` | ~2s | New component |
+| `delete:component` | ~3s | Remove component |
 
 ---
 
@@ -352,9 +530,16 @@ npm run preview          # 3. Verify removal
 | Start dev | `npm run dev` |
 | Build prod | `npm run build` |
 | Clean build | `npm run build:clean` |
-| Analyze | `npm run build:analyze` |
+| Bundle analyze | `npm run build:analyze` |
 | Create page | `npm run create:page` |
 | Delete page | `npm run delete:page` |
+| Create component | `npm run create:component` |
+| Add shadcn component | `npm run add:shadcn button` |
+| List registry components | `npm run list:registry` |
+| Delete component | `npm run delete:component` |
+| Analyze components | `npm run analyze:components` |
+| Analyze pages | `npm run analyze:pages` |
+| Analyze dependencies | `npm run analyze:deps` |
 | Check types | `npm run type-check` |
 | Lint | `npm run lint` |
 | Preview | `npm run preview` |
@@ -418,11 +603,26 @@ npm run build:clean  # Clear all caches and rebuild
 
 ## Related Documentation
 
-- **[01-CREATE_PAGE.md](./01-CREATE_PAGE.md)** - Complete page creation guide
-- **[02-DELETE_PAGE.md](./02-DELETE_PAGE.md)** - Complete page deletion guide
-- **[03-POST_BUILD.md](./03-POST_BUILD.md)** - Post-build process documentation
+### 📦 Build & Deployment
+- **[01-POST_BUILD.md](./01-POST_BUILD.md)** - Post-build process documentation
 - **[obfuscation/](./obfuscation/)** - Cached obfuscation system documentation
 - **[production-build/](../production-build/)** - Build process documentation
+
+### 📄 Page Management
+- **[02-CREATE_PAGE.md](./02-CREATE_PAGE.md)** - Complete page creation guide
+- **[03-DELETE_PAGE.md](./03-DELETE_PAGE.md)** - Complete page deletion guide
+
+### 🧩 Component Management
+- **[04-CREATE_COMPONENT.md](./04-CREATE_COMPONENT.md)** - Complete component creation guide
+- **[12-ADD_SHADCN_COMPONENT.md](./12-ADD_SHADCN_COMPONENT.md)** - Add & adapt shadcn components guide
+- **[05-DELETE_COMPONENT.md](./05-DELETE_COMPONENT.md)** - Complete component deletion guide
+
+### 📊 Analysis & Insights
+- **[08-ANALYZE_PAGES.md](./08-ANALYZE_PAGES.md)** - Page analysis guide
+- **[09-ANALYZE_COMPONENTS.md](./09-ANALYZE_COMPONENTS.md)** - Shared component analysis guide
+- **[11-ANALYZE_DEPS.md](./11-ANALYZE_DEPS.md)** - NPM dependency analysis guide
+
+### Other Resources
 - **[performance-optimization-guide/](../performance-optimization-guide/)** - Performance optimization guide
 
 ---

@@ -186,14 +186,11 @@ css: {
 
 ```typescript
 css: {
-  postcss: {
-    plugins: [
-      tailwindcss,
-      autoprefixer,
-    ]
-  }
+  postcss: './postcss.config.js'
 }
 ```
+
+**Note:** Tailwind CSS v4 includes autoprefixing automatically, so `autoprefixer` is no longer needed. The PostCSS configuration only includes `@tailwindcss/postcss`.
 
 ---
 

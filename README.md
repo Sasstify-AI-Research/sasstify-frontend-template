@@ -208,6 +208,7 @@ Built with:
 - 🚀 **[Quick Start Guide](./docs/quick-start/)** - Get started in 5 minutes
 - 🔧 **[Build Guide](./docs/production-build/)** - Production build pipeline
 - ⚡ **[Performance Guide](./docs/performance-optimization-guide/)** - Optimization tips
+- 🤖 **[AI-Assisted UI Development](./docs/ai-assisted-ui-development/README.md)** - Structure & workflows for safe AI copilots
 
 ### Project Management
 - 🗺️ **[Roadmap](./ROADMAP.md)** - Future plans and feature timeline

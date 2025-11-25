@@ -68,7 +68,7 @@ Complete documentation for building and working with this modern React + TypeScr
 | Document | Description | Time |
 |----------|-------------|------|
 | [scripts/](./scripts/) | ⭐ **Complete scripts documentation** | 15 min |
-| [scripts/01-CREATE_PAGE.md](./scripts/01-CREATE_PAGE.md) | ⭐ Automated page creation guide | 10 min |
+| [scripts/02-CREATE_PAGE.md](./scripts/02-CREATE_PAGE.md) | ⭐ Automated page creation guide | 10 min |
 
 **Quick commands:**
 - `npm run create:page` - Create new page
@@ -132,7 +132,7 @@ Complete documentation for building and working with this modern React + TypeScr
 → [quick-start/](./quick-start/)
 
 **...create a new page**
-→ Run `npm run create:page` - See [scripts/01-CREATE_PAGE.md](./scripts/01-CREATE_PAGE.md)
+→ Run `npm run create:page` - See [scripts/02-CREATE_PAGE.md](./scripts/02-CREATE_PAGE.md)
 
 **...understand the build process**
 → [production-build/](./production-build/)
@@ -173,7 +173,7 @@ Complete documentation for building and working with this modern React + TypeScr
 
 **Goal:** Create a new page for the MPA
 
-1. Read [scripts/01-CREATE_PAGE.md#examples](./scripts/01-CREATE_PAGE.md#examples) (5 min)
+1. Read [scripts/02-CREATE_PAGE.md#examples](./scripts/02-CREATE_PAGE.md#examples) (5 min)
 2. Run `npm run create:page` (5 min)
 3. Customize your new page (8 min)
 4. Done! 🎉
@@ -225,7 +225,7 @@ Complete documentation for building and working with this modern React + TypeScr
 **Essential:**
 - [quick-start/](./quick-start/)
 - [reusable-implementations/](./reusable-implementations/)
-- [scripts/01-CREATE_PAGE.md](./scripts/01-CREATE_PAGE.md)
+- [scripts/02-CREATE_PAGE.md](./scripts/02-CREATE_PAGE.md)
 
 **Important:**
 - [reusable-implementations/lazy-loading/](./reusable-implementations/lazy-loading/)
@@ -283,9 +283,17 @@ docs/
 ├── scripts/                           ← NPM scripts & automation documentation
 │   ├── README.md                      ← All npm scripts & workflows
 │   ├── obfuscation/                   ← Intelligent obfuscation caching
-│   ├── 01-CREATE_PAGE.md              ← Create page script
-│   ├── 02-DELETE_PAGE.md              ← Delete page script
-│   └── 03-POST_BUILD.md               ← Post-build script
+│   ├── 01-POST_BUILD.md               ← Post-build script
+│   ├── 02-CREATE_PAGE.md              ← Create page script
+│   ├── 03-DELETE_PAGE.md              ← Delete page script
+│   ├── 04-CREATE_COMPONENT.md         ← Create component script
+│   ├── 05-DELETE_COMPONENT.md         ← Delete component script
+│   ├── 06-CREATE_PAGE_COMPONENT.md    ← Create page component script
+│   ├── 07-DELETE_PAGE_COMPONENT.md    ← Delete page component script
+│   ├── 08-ANALYZE_PAGES.md            ← Analyze pages script
+│   ├── 09-ANALYZE_COMPONENTS.md       ← Analyze components script
+│   ├── 10-ANALYZE_PAGE_COMPONENTS.md  ← Analyze page components script
+│   └── 11-ANALYZE_DEPS.md             ← Analyze dependencies script
 ├── reusable-implementations/          ← Components, hooks & utilities
 │   ├── README.md                      ← Component library overview
 │   ├── pages/                         ← Complete page implementations

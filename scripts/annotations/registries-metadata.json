@@ -1,0 +1,583 @@
+{
+  "lastUpdated": "2025-12-05T03:08:25.297Z",
+  "totalRegistries": 97,
+  "registries": {
+    "@8bitcn": {
+      "name": "8bitcn",
+      "url": "https://8bitcn.com/r",
+      "indexUrl": "https://8bitcn.com/r/index.json"
+    },
+    "@97cn": {
+      "name": "97cn",
+      "url": "https://97cn.itzik.co/r",
+      "indexUrl": "https://97cn.itzik.co/r/index.json"
+    },
+    "@aceternity": {
+      "name": "Aceternity",
+      "url": "https://ui.aceternity.com/registry",
+      "indexUrl": "https://ui.aceternity.com/registry/index.json"
+    },
+    "@aevr": {
+      "name": "Aevr",
+      "url": "https://ui.aevr.space/r",
+      "indexUrl": "https://ui.aevr.space/r/index.json"
+    },
+    "@ai-elements": {
+      "name": "Ai Elements",
+      "url": "https://registry.ai-sdk.dev",
+      "indexUrl": "https://registry.ai-sdk.dev/index.json"
+    },
+    "@alexcarpenter": {
+      "name": "Alexcarpenter",
+      "url": "https://ui.alexcarpenter.me/r",
+      "indexUrl": "https://ui.alexcarpenter.me/r/index.json"
+    },
+    "@algolia": {
+      "name": "Algolia",
+      "url": "https://sitesearch.algolia.com/r",
+      "indexUrl": "https://sitesearch.algolia.com/r/index.json"
+    },
+    "@alpine": {
+      "name": "Alpine",
+      "url": "https://alpine-registry.vercel.app/r",
+      "indexUrl": "https://alpine-registry.vercel.app/r/index.json"
+    },
+    "@aliimam": {
+      "name": "Aliimam",
+      "url": "https://aliimam.in/r",
+      "indexUrl": "https://aliimam.in/r/index.json"
+    },
+    "@animate-ui": {
+      "name": "Animate Ui",
+      "url": "https://animate-ui.com/r",
+      "indexUrl": "https://animate-ui.com/r/index.json"
+    },
+    "@assistant-ui": {
+      "name": "Assistant Ui",
+      "url": "https://r.assistant-ui.com",
+      "indexUrl": "https://r.assistant-ui.com/index.json"
+    },
+    "@austin-ui": {
+      "name": "Austin Ui",
+      "url": "https://austin-ui.netlify.app/r",
+      "indexUrl": "https://austin-ui.netlify.app/r/index.json"
+    },
+    "@basecn": {
+      "name": "Basecn",
+      "url": "https://basecn.dev/r",
+      "indexUrl": "https://basecn.dev/r/index.json"
+    },
+    "@better-upload": {
+      "name": "Better Upload",
+      "url": "https://better-upload.com/r",
+      "indexUrl": "https://better-upload.com/r/index.json"
+    },
+    "@billingsdk": {
+      "name": "Billingsdk",
+      "url": "https://billingsdk.com/r",
+      "indexUrl": "https://billingsdk.com/r/index.json"
+    },
+    "@blocks": {
+      "name": "Blocks",
+      "url": "https://blocks.so/r",
+      "indexUrl": "https://blocks.so/r/index.json"
+    },
+    "@bucharitesh": {
+      "name": "Bucharitesh",
+      "url": "https://bucharitesh.in/r",
+      "indexUrl": "https://bucharitesh.in/r/index.json"
+    },
+    "@clerk": {
+      "name": "Clerk",
+      "url": "https://clerk.com/r",
+      "indexUrl": "https://clerk.com/r/index.json"
+    },
+    "@coss": {
+      "name": "Coss",
+      "url": "https://coss.com/ui/r",
+      "indexUrl": "https://coss.com/ui/r/index.json"
+    },
+    "@commercn": {
+      "name": "Commercn",
+      "url": "https://commercn.com/r",
+      "indexUrl": "https://commercn.com/r/index.json"
+    },
+    "@chisom-ui": {
+      "name": "Chisom Ui",
+      "url": "https://chisom-ui.netlify.app/r",
+      "indexUrl": "https://chisom-ui.netlify.app/r/index.json"
+    },
+    "@creative-tim": {
+      "name": "Creative Tim",
+      "url": "https://www.creative-tim.com/ui/r",
+      "indexUrl": "https://www.creative-tim.com/ui/r/index.json"
+    },
+    "@cult-ui": {
+      "name": "Cult Ui",
+      "url": "https://cult-ui.com/r",
+      "indexUrl": "https://cult-ui.com/r/index.json"
+    },
+    "@diceui": {
+      "name": "Diceui",
+      "url": "https://diceui.com/r",
+      "indexUrl": "https://diceui.com/r/index.json"
+    },
+    "@efferd": {
+      "name": "Efferd",
+      "url": "https://efferd.com/r",
+      "indexUrl": "https://efferd.com/r/index.json"
+    },
+    "@eldoraui": {
+      "name": "Eldoraui",
+      "url": "https://eldoraui.site/r",
+      "indexUrl": "https://eldoraui.site/r/index.json"
+    },
+    "@elements": {
+      "name": "Elements",
+      "url": "https://tryelements.dev/r",
+      "indexUrl": "https://tryelements.dev/r/index.json"
+    },
+    "@elevenlabs-ui": {
+      "name": "Elevenlabs Ui",
+      "url": "https://ui.elevenlabs.io/r",
+      "indexUrl": "https://ui.elevenlabs.io/r/index.json"
+    },
+    "@fancy": {
+      "name": "Fancy",
+      "url": "https://fancycomponents.dev/r",
+      "indexUrl": "https://fancycomponents.dev/r/index.json"
+    },
+    "@formcn": {
+      "name": "Formcn",
+      "url": "https://formcn.dev/r",
+      "indexUrl": "https://formcn.dev/r/index.json"
+    },
+    "@gaia": {
+      "name": "Gaia",
+      "url": "https://ui.heygaia.io/r",
+      "indexUrl": "https://ui.heygaia.io/r/index.json"
+    },
+    "@glass-ui": {
+      "name": "Glass Ui",
+      "url": "https://glass-ui.crenspire.com/r",
+      "indexUrl": "https://glass-ui.crenspire.com/r/index.json"
+    },
+    "@heseui": {
+      "name": "Heseui",
+      "url": "https://www.heseui.com/r",
+      "indexUrl": "https://www.heseui.com/r/index.json"
+    },
+    "@hooks": {
+      "name": "Hooks",
+      "url": "https://shadcn-hooks.vercel.app/r",
+      "indexUrl": "https://shadcn-hooks.vercel.app/r/index.json"
+    },
+    "@intentui": {
+      "name": "Intentui",
+      "url": "https://intentui.com/r",
+      "indexUrl": "https://intentui.com/r/index.json"
+    },
+    "@kibo-ui": {
+      "name": "Kibo Ui",
+      "url": "https://www.kibo-ui.com/r",
+      "indexUrl": "https://www.kibo-ui.com/r/index.json"
+    },
+    "@kanpeki": {
+      "name": "Kanpeki",
+      "url": "https://kanpeki.vercel.app/r",
+      "indexUrl": "https://kanpeki.vercel.app/r/index.json"
+    },
+    "@kokonutui": {
+      "name": "Kokonutui",
+      "url": "https://kokonutui.com/r",
+      "indexUrl": "https://kokonutui.com/r/index.json"
+    },
+    "@lens-blocks": {
+      "name": "Lens Blocks",
+      "url": "https://lensblocks.com/r",
+      "indexUrl": "https://lensblocks.com/r/index.json"
+    },
+    "@limeplay": {
+      "name": "Limeplay",
+      "url": "https://limeplay.winoffrg.dev/r",
+      "indexUrl": "https://limeplay.winoffrg.dev/r/index.json"
+    },
+    "@lytenyte": {
+      "name": "Lytenyte",
+      "url": "https://www.1771technologies.com/r",
+      "indexUrl": "https://www.1771technologies.com/r/index.json"
+    },
+    "@magicui": {
+      "name": "Magicui",
+      "url": "https://magicui.design/r",
+      "indexUrl": "https://magicui.design/r/index.json"
+    },
+    "@magicui-pro": {
+      "name": "Magicui Pro",
+      "url": "https://pro.magicui.design/registry",
+      "indexUrl": "https://pro.magicui.design/registry/index.json"
+    },
+    "@motion-primitives": {
+      "name": "Motion Primitives",
+      "url": "https://motion-primitives.com/c",
+      "indexUrl": "https://motion-primitives.com/c/index.json"
+    },
+    "@mui-treasury": {
+      "name": "Mui Treasury",
+      "url": "https://mui-treasury.com/r",
+      "indexUrl": "https://mui-treasury.com/r/index.json"
+    },
+    "@nativeui": {
+      "name": "Nativeui",
+      "url": "https://nativeui.io/registry",
+      "indexUrl": "https://nativeui.io/registry/index.json"
+    },
+    "@nexus-elements": {
+      "name": "Nexus Elements",
+      "url": "https://elements.nexus.availproject.org/r",
+      "indexUrl": "https://elements.nexus.availproject.org/r/index.json"
+    },
+    "@ncdai": {
+      "name": "Ncdai",
+      "url": "https://chanhdai.com/r",
+      "indexUrl": "https://chanhdai.com/r/index.json"
+    },
+    "@nuqs": {
+      "name": "Nuqs",
+      "url": "https://nuqs.dev/r",
+      "indexUrl": "https://nuqs.dev/r/index.json"
+    },
+    "@oui": {
+      "name": "Oui",
+      "url": "https://oui.mw10013.workers.dev/r",
+      "indexUrl": "https://oui.mw10013.workers.dev/r/index.json"
+    },
+    "@paceui": {
+      "name": "Paceui",
+      "url": "https://ui.paceui.com/r",
+      "indexUrl": "https://ui.paceui.com/r/index.json"
+    },
+    "@plate": {
+      "name": "Plate",
+      "url": "https://platejs.org/r",
+      "indexUrl": "https://platejs.org/r/index.json"
+    },
+    "@prompt-kit": {
+      "name": "Prompt Kit",
+      "url": "https://prompt-kit.com/c",
+      "indexUrl": "https://prompt-kit.com/c/index.json"
+    },
+    "@prosekit": {
+      "name": "Prosekit",
+      "url": "https://prosekit.dev/r",
+      "indexUrl": "https://prosekit.dev/r/index.json"
+    },
+    "@phucbm": {
+      "name": "Phucbm",
+      "url": "https://ui.phucbm.com/r",
+      "indexUrl": "https://ui.phucbm.com/r/index.json"
+    },
+    "@react-bits": {
+      "name": "React Bits",
+      "url": "https://reactbits.dev/r",
+      "indexUrl": "https://reactbits.dev/r/index.json"
+    },
+    "@react-market": {
+      "name": "React Market",
+      "url": "https://www.react-market.com/get",
+      "indexUrl": "https://www.react-market.com/get/index.json"
+    },
+    "@retroui": {
+      "name": "Retroui",
+      "url": "https://retroui.dev/r",
+      "indexUrl": "https://retroui.dev/r/index.json"
+    },
+    "@reui": {
+      "name": "Reui",
+      "url": "https://reui.io/r",
+      "indexUrl": "https://reui.io/r/index.json"
+    },
+    "@rigidui": {
+      "name": "Rigidui",
+      "url": "https://rigidui.com/r",
+      "indexUrl": "https://rigidui.com/r/index.json"
+    },
+    "@roiui": {
+      "name": "Roiui",
+      "url": "https://roiui.com/r",
+      "indexUrl": "https://roiui.com/r/index.json"
+    },
+    "@solaceui": {
+      "name": "Solaceui",
+      "url": "https://www.solaceui.com/r",
+      "indexUrl": "https://www.solaceui.com/r/index.json"
+    },
+    "@scrollxui": {
+      "name": "Scrollxui",
+      "url": "https://www.scrollxui.dev/registry",
+      "indexUrl": "https://www.scrollxui.dev/registry/index.json"
+    },
+    "@systaliko-ui": {
+      "name": "Systaliko Ui",
+      "url": "https://systaliko-ui.vercel.app/r",
+      "indexUrl": "https://systaliko-ui.vercel.app/r/index.json"
+    },
+    "@shadcn-editor": {
+      "name": "Shadcn Editor",
+      "url": "https://shadcn-editor.vercel.app/r",
+      "indexUrl": "https://shadcn-editor.vercel.app/r/index.json"
+    },
+    "@shadcn-map": {
+      "name": "Shadcn Map",
+      "url": "http://shadcn-map.vercel.app/r",
+      "indexUrl": "http://shadcn-map.vercel.app/r/index.json"
+    },
+    "@shadcn-studio": {
+      "name": "Shadcn Studio",
+      "url": "https://shadcnstudio.com/r",
+      "indexUrl": "https://shadcnstudio.com/r/index.json"
+    },
+    "@shadcnblocks": {
+      "name": "Shadcnblocks",
+      "url": "https://shadcnblocks.com/r",
+      "indexUrl": "https://shadcnblocks.com/r/index.json"
+    },
+    "@shadcnui-blocks": {
+      "name": "Shadcnui Blocks",
+      "url": "https://shadcnui-blocks.com/r",
+      "indexUrl": "https://shadcnui-blocks.com/r/index.json"
+    },
+    "@shadcraft": {
+      "name": "Shadcraft",
+      "url": "https://shadcraft-free.vercel.app/r",
+      "indexUrl": "https://shadcraft-free.vercel.app/r/index.json"
+    },
+    "@simple-ai": {
+      "name": "Simple Ai",
+      "url": "https://simple-ai.dev/r",
+      "indexUrl": "https://simple-ai.dev/r/index.json"
+    },
+    "@skiper-ui": {
+      "name": "Skiper Ui",
+      "url": "https://skiper-ui.com/registry",
+      "indexUrl": "https://skiper-ui.com/registry/index.json"
+    },
+    "@skyr": {
+      "name": "Skyr",
+      "url": "https://ui-play.skyroc.me/r",
+      "indexUrl": "https://ui-play.skyroc.me/r/index.json"
+    },
+    "@smoothui": {
+      "name": "Smoothui",
+      "url": "https://smoothui.dev/r",
+      "indexUrl": "https://smoothui.dev/r/index.json"
+    },
+    "@spectrumui": {
+      "name": "Spectrumui",
+      "url": "https://ui.spectrumhq.in/r",
+      "indexUrl": "https://ui.spectrumhq.in/r/index.json"
+    },
+    "@supabase": {
+      "name": "Supabase",
+      "url": "https://supabase.com/ui/r",
+      "indexUrl": "https://supabase.com/ui/r/index.json"
+    },
+    "@svgl": {
+      "name": "Svgl",
+      "url": "https://svgl.app/r",
+      "indexUrl": "https://svgl.app/r/index.json"
+    },
+    "@tailark": {
+      "name": "Tailark",
+      "url": "https://tailark.com/r",
+      "indexUrl": "https://tailark.com/r/index.json"
+    },
+    "@tweakcn": {
+      "name": "Tweakcn",
+      "url": "https://tweakcn.com/r/themes",
+      "indexUrl": "https://tweakcn.com/r/themes/index.json"
+    },
+    "@wds": {
+      "name": "Wds",
+      "url": "https://wds-shadcn-registry.netlify.app/r",
+      "indexUrl": "https://wds-shadcn-registry.netlify.app/r/index.json"
+    },
+    "@wandry-ui": {
+      "name": "Wandry Ui",
+      "url": "https://ui.wandry.com.ua/r",
+      "indexUrl": "https://ui.wandry.com.ua/r/index.json"
+    },
+    "@wigggle-ui": {
+      "name": "Wigggle Ui",
+      "url": "https://wigggle-ui.vercel.app/r",
+      "indexUrl": "https://wigggle-ui.vercel.app/r/index.json"
+    },
+    "@paykit-sdk": {
+      "name": "Paykit Sdk",
+      "url": "https://www.usepaykit.dev/r",
+      "indexUrl": "https://www.usepaykit.dev/r/index.json"
+    },
+    "@pixelact-ui": {
+      "name": "Pixelact Ui",
+      "url": "https://www.pixelactui.com/r",
+      "indexUrl": "https://www.pixelactui.com/r/index.json"
+    },
+    "@zippystarter": {
+      "name": "Zippystarter",
+      "url": "https://zippystarter.com/r",
+      "indexUrl": "https://zippystarter.com/r/index.json"
+    },
+    "@shadcndesign": {
+      "name": "Shadcndesign",
+      "url": "https://shadcndesign-free.vercel.app/r",
+      "indexUrl": "https://shadcndesign-free.vercel.app/r/index.json"
+    },
+    "@ha-components": {
+      "name": "Ha Components",
+      "url": "https://hacomponents.keshuac.com/r",
+      "indexUrl": "https://hacomponents.keshuac.com/r/index.json"
+    },
+    "@shadix-ui": {
+      "name": "Shadix Ui",
+      "url": "https://shadix-ui.vercel.app/r",
+      "indexUrl": "https://shadix-ui.vercel.app/r/index.json"
+    },
+    "@utilcn": {
+      "name": "Utilcn",
+      "url": "https://utilcn.dev/r",
+      "indexUrl": "https://utilcn.dev/r/index.json"
+    },
+    "@hextaui": {
+      "name": "Hextaui",
+      "url": "https://hextaui.com/r",
+      "indexUrl": "https://hextaui.com/r/index.json"
+    },
+    "@taki": {
+      "name": "Taki",
+      "url": "https://taki-ui.com/r",
+      "indexUrl": "https://taki-ui.com/r/index.json"
+    },
+    "@square-ui": {
+      "name": "Square Ui",
+      "url": "https://square.lndev.me/registry",
+      "indexUrl": "https://square.lndev.me/registry/index.json"
+    },
+    "@moleculeui": {
+      "name": "Moleculeui",
+      "url": "https://moleculeui.design/r",
+      "indexUrl": "https://moleculeui.design/r/index.json"
+    },
+    "@uicapsule": {
+      "name": "Uicapsule",
+      "url": "https://uicapsule.com/r",
+      "indexUrl": "https://uicapsule.com/r/index.json"
+    },
+    "@uitripled": {
+      "name": "Uitripled",
+      "url": "https://ui.tripled.work/r",
+      "indexUrl": "https://ui.tripled.work/r/index.json"
+    },
+    "@ui-layouts": {
+      "name": "Ui Layouts",
+      "url": "https://ui-layouts.com/r",
+      "indexUrl": "https://ui-layouts.com/r/index.json"
+    },
+    "@shadcn": {
+      "name": "Shadcn",
+      "url": "https://ui.shadcn.com/r",
+      "indexUrl": "https://ui.shadcn.com/r/index.json"
+    }
+  },
+  "statistics": {
+    "successful": 13,
+    "failed": 84,
+    "totalComponents": 194,
+    "totalBlocks": 0
+  },
+  "failedRegistries": [
+    "@8bitcn",
+    "@97cn",
+    "@aevr",
+    "@ai-elements",
+    "@alexcarpenter",
+    "@algolia",
+    "@alpine",
+    "@assistant-ui",
+    "@austin-ui",
+    "@basecn",
+    "@better-upload",
+    "@blocks",
+    "@bucharitesh",
+    "@clerk",
+    "@coss",
+    "@commercn",
+    "@chisom-ui",
+    "@cult-ui",
+    "@efferd",
+    "@elements",
+    "@elevenlabs-ui",
+    "@fancy",
+    "@formcn",
+    "@gaia",
+    "@glass-ui",
+    "@heseui",
+    "@hooks",
+    "@intentui",
+    "@kibo-ui",
+    "@kanpeki",
+    "@kokonutui",
+    "@lens-blocks",
+    "@lytenyte",
+    "@magicui-pro",
+    "@motion-primitives",
+    "@mui-treasury",
+    "@nativeui",
+    "@nexus-elements",
+    "@ncdai",
+    "@nuqs",
+    "@oui",
+    "@paceui",
+    "@plate",
+    "@prompt-kit",
+    "@prosekit",
+    "@phucbm",
+    "@react-bits",
+    "@react-market",
+    "@retroui",
+    "@reui",
+    "@rigidui",
+    "@roiui",
+    "@solaceui",
+    "@scrollxui",
+    "@shadcn-editor",
+    "@shadcn-map",
+    "@shadcn-studio",
+    "@shadcnblocks",
+    "@shadcnui-blocks",
+    "@simple-ai",
+    "@skiper-ui",
+    "@skyr",
+    "@smoothui",
+    "@spectrumui",
+    "@supabase",
+    "@svgl",
+    "@tailark",
+    "@tweakcn",
+    "@wds",
+    "@wandry-ui",
+    "@wigggle-ui",
+    "@paykit-sdk",
+    "@pixelact-ui",
+    "@zippystarter",
+    "@shadcndesign",
+    "@ha-components",
+    "@shadix-ui",
+    "@utilcn",
+    "@hextaui",
+    "@taki",
+    "@square-ui",
+    "@uicapsule",
+    "@uitripled",
+    "@ui-layouts"
+  ]
+}

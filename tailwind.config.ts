@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	content: [
 		"./src/**/*.{ts,tsx}",
-		"./src/**/*.module.css"
+		"./src/**/*.module.css",
+		"./src/**/*.html",
 	],
-	plugins: [tailwindcssAnimate],
+	plugins: [],
 } satisfies Config;

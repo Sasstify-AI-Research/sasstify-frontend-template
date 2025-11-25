@@ -1,16 +1,16 @@
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/blocks/layout/Layout';
 import { lazy, Suspense, useState } from 'react';
 import { BarChart3, Home, Sparkles, Info } from 'lucide-react';
-import Section from '@/components/section/Section';
-import HeroSection from './components/sections/HeroSection';
+import Section from '@/components/ui/section/Section';
+import IndexHeroSection from './IndexHeroSection';
 import { useSectionNavigation } from '@/hooks/useSectionNavigation';
 
 // ✅ Lazy load section components - only load when scrolled into viewport
-const FeaturesSection = lazy(() => import('./components/sections/FeaturesSection'));
-const AboutSection = lazy(() => import('./components/sections/AboutSection'));
+const IndexFeaturesSection = lazy(() => import('./IndexFeaturesSection'));
+const IndexAboutSection = lazy(() => import('./IndexAboutSection'));
 
 // ✅ Lazy load heavy chart component - only loads when button clicked
-const HeavyChart = lazy(() => import('./components/HeavyChart'));
+const IndexHeavyChart = lazy(() => import('./IndexHeavyChart'));
 
 const Index = () => {
   const [showChart, setShowChart] = useState(false);
@@ -77,11 +77,11 @@ const Index = () => {
     >
 
       {/* Hero Section - Always loaded (above fold) */}
-      <HeroSection />
+      <IndexHeroSection />
 
       {/* Features Section - Lazy loaded with reusable Section component */}
       <Section id="features" variant="gray" minHeight="800px" viewportLazyLoad>
-        <FeaturesSection />
+        <IndexFeaturesSection />
       </Section>
 
       {/* Demo Section - Existing lazy loading chart example */}
@@ -134,7 +134,7 @@ const Index = () => {
                     </div>
                   }
                 >
-                  <HeavyChart />
+                  <IndexHeavyChart />
                 </Suspense>
               </div>
             )}
@@ -159,7 +159,7 @@ const Index = () => {
 
       {/* About Section - Lazy loaded with reusable Section component */}
       <Section id="about" variant="white" minHeight="900px" viewportLazyLoad>
-        <AboutSection />
+        <IndexAboutSection />
       </Section>
     </Layout>
   );

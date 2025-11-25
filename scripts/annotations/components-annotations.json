@@ -1,0 +1,386 @@
+{
+  "registries": {
+    "@8bitcn": {
+      "accordion": {
+        "type": "component",
+        "name": "Accordion",
+        "description": "Expandable content sections"
+      },
+      "alert": {
+        "type": "component",
+        "name": "Alert",
+        "description": "Contextual feedback messages"
+      },
+      "alert-dialog": {
+        "type": "component",
+        "name": "Alert Dialog",
+        "description": "Modal confirmation dialogs"
+      },
+      "avatar": {
+        "type": "component",
+        "name": "Avatar",
+        "description": "User profile images"
+      },
+      "badge": {
+        "type": "component",
+        "name": "Badge",
+        "description": "Status indicators and labels"
+      },
+      "breadcrumb": {
+        "type": "component",
+        "name": "Breadcrumb",
+        "description": "Navigation path indicators"
+      },
+      "button": {
+        "type": "component",
+        "name": "Button",
+        "description": "Clickable buttons with pixel borders"
+      },
+      "calendar": {
+        "type": "component",
+        "name": "Calendar",
+        "description": "Date selection calendars"
+      },
+      "card": {
+        "type": "component",
+        "name": "Card",
+        "description": "Content containers with headers"
+      },
+      "carousel": {
+        "type": "component",
+        "name": "Carousel",
+        "description": "Image and content sliders"
+      },
+      "chart": {
+        "type": "component",
+        "name": "Chart",
+        "description": "Data visualization charts"
+      },
+      "checkbox": {
+        "type": "component",
+        "name": "Checkbox",
+        "description": "Pixel-perfect checkboxes"
+      },
+      "collapsible": {
+        "type": "component",
+        "name": "Collapsible",
+        "description": "Show/hide content areas"
+      },
+      "combo-box": {
+        "type": "component",
+        "name": "Combo Box",
+        "description": "Searchable select inputs"
+      },
+      "command": {
+        "type": "component",
+        "name": "Command",
+        "description": "Command palette interface"
+      },
+      "context-menu": {
+        "type": "component",
+        "name": "Context Menu",
+        "description": "Right-click menus"
+      },
+      "date-picker": {
+        "type": "component",
+        "name": "Date Picker",
+        "description": "Date selection interface"
+      },
+      "dialog": {
+        "type": "component",
+        "name": "Dialog",
+        "description": "Modal dialog windows"
+      },
+      "drawer": {
+        "type": "component",
+        "name": "Drawer",
+        "description": "Slide-out panel containers"
+      },
+      "dropdown-menu": {
+        "type": "component",
+        "name": "Dropdown Menu",
+        "description": "Contextual dropdown menus"
+      },
+      "empty": {
+        "type": "component",
+        "name": "Empty",
+        "description": "Empty state placeholders"
+      },
+      "enemy-health-display": {
+        "type": "component",
+        "name": "Enemy Health Display",
+        "description": "Boss and enemy health UI"
+      },
+      "health-bar": {
+        "type": "component",
+        "name": "Health Bar",
+        "description": "Player health indicators"
+      },
+      "hover-card": {
+        "type": "component",
+        "name": "Hover Card",
+        "description": "Preview cards on hover"
+      },
+      "input": {
+        "type": "component",
+        "name": "Input",
+        "description": "Text input fields with retro styling"
+      },
+      "input-otp": {
+        "type": "component",
+        "name": "Input OTP",
+        "description": "One-time password inputs"
+      },
+      "item": {
+        "type": "component",
+        "name": "Item",
+        "description": "Inventory item slots"
+      },
+      "kbd": {
+        "type": "component",
+        "name": "Kbd",
+        "description": "Keyboard key indicators"
+      },
+      "label": {
+        "type": "component",
+        "name": "Label",
+        "description": "Accessible form labels"
+      },
+      "mana-bar": {
+        "type": "component",
+        "name": "Mana Bar",
+        "description": "Magic/resource bars"
+      },
+      "menubar": {
+        "type": "component",
+        "name": "Menubar",
+        "description": "Horizontal menu bars"
+      },
+      "navigation-menu": {
+        "type": "component",
+        "name": "Navigation Menu",
+        "description": "Main site navigation"
+      },
+      "pagination": {
+        "type": "component",
+        "name": "Pagination",
+        "description": "Page navigation controls"
+      },
+      "popover": {
+        "type": "component",
+        "name": "Popover",
+        "description": "Floating content containers"
+      },
+      "progress": {
+        "type": "component",
+        "name": "Progress",
+        "description": "Progress bars and indicators"
+      },
+      "radio-group": {
+        "type": "component",
+        "name": "Radio Group",
+        "description": "Single-select option groups"
+      },
+      "resizable": {
+        "type": "component",
+        "name": "Resizable",
+        "description": "Resizable panel layouts"
+      },
+      "retro-mode-switcher": {
+        "type": "component",
+        "name": "Retro Mode Switcher",
+        "description": "Toggle retro visual effects"
+      },
+      "scroll-area": {
+        "type": "component",
+        "name": "Scroll Area",
+        "description": "Custom scrollable regions"
+      },
+      "select": {
+        "type": "component",
+        "name": "Select",
+        "description": "Dropdown selection menus"
+      },
+      "separator": {
+        "type": "component",
+        "name": "Separator",
+        "description": "Visual dividers for content"
+      },
+      "sheet": {
+        "type": "component",
+        "name": "Sheet",
+        "description": "Side panel overlays"
+      },
+      "sidebar": {
+        "type": "component",
+        "name": "Sidebar",
+        "description": "Collapsible side navigation"
+      },
+      "skeleton": {
+        "type": "component",
+        "name": "Skeleton",
+        "description": "Loading placeholder animations"
+      },
+      "slider": {
+        "type": "component",
+        "name": "Slider",
+        "description": "Range sliders for value selection"
+      },
+      "spinner": {
+        "type": "component",
+        "name": "Spinner",
+        "description": "Loading spinners"
+      },
+      "switch": {
+        "type": "component",
+        "name": "Switch",
+        "description": "Toggle switches with animations"
+      },
+      "table": {
+        "type": "component",
+        "name": "Table",
+        "description": "Data tables with sorting"
+      },
+      "tabs": {
+        "type": "component",
+        "name": "Tabs",
+        "description": "Tabbed content sections"
+      },
+      "textarea": {
+        "type": "component",
+        "name": "Textarea",
+        "description": "Multi-line text input areas"
+      },
+      "theme-selector": {
+        "type": "component",
+        "name": "Theme Selector",
+        "description": "Switch between retro themes"
+      },
+      "toast": {
+        "type": "component",
+        "name": "Toast",
+        "description": "Brief notification messages"
+      },
+      "toggle": {
+        "type": "component",
+        "name": "Toggle",
+        "description": "Two-state toggle buttons"
+      },
+      "toggle-group": {
+        "type": "component",
+        "name": "Toggle Group",
+        "description": "Group of toggle buttons"
+      },
+      "tooltip": {
+        "type": "component",
+        "name": "Tooltip",
+        "description": "Hover information popups"
+      },
+      "chapter-intro": {
+        "type": "block",
+        "name": "Chapter Intro",
+        "description": "Level introduction screens with background images"
+      },
+      "main-menu": {
+        "type": "block",
+        "name": "Main Menu",
+        "description": "Classic game main menu interface"
+      },
+      "difficulty-select": {
+        "type": "block",
+        "name": "Difficulty Select",
+        "description": "Game difficulty selection screen"
+      },
+      "dialogue": {
+        "type": "block",
+        "name": "Dialogue",
+        "description": "RPG-style dialogue boxes with avatars"
+      },
+      "pause-menu": {
+        "type": "block",
+        "name": "Pause Menu",
+        "description": "In-game pause menu overlay"
+      },
+      "game-over": {
+        "type": "block",
+        "name": "Game Over",
+        "description": "Game over screen with retry options"
+      },
+      "audio-settings": {
+        "type": "block",
+        "name": "Audio Settings",
+        "description": "Volume and sound settings panel"
+      },
+      "player-profile-card": {
+        "type": "block",
+        "name": "Player Profile Card",
+        "description": "Player stats and avatar display"
+      },
+      "leaderboard": {
+        "type": "block",
+        "name": "Leaderboard",
+        "description": "High score ranking tables"
+      },
+      "quest-log": {
+        "type": "block",
+        "name": "Quest Log",
+        "description": "Mission and task tracking system"
+      },
+      "login-form": {
+        "type": "block",
+        "name": "Login Form",
+        "description": "Simple login form with email and password"
+      },
+      "login-page": {
+        "type": "block",
+        "name": "Login Page",
+        "description": "Two column login with cover image"
+      },
+      "login-form-2": {
+        "type": "block",
+        "name": "Login Form with Icons",
+        "description": "Login form with social login icons"
+      },
+      "login-form-with-image": {
+        "type": "block",
+        "name": "Login Form with Image",
+        "description": "Compact login with side image"
+      },
+      "dashboard-01": {
+        "type": "block",
+        "name": "8-bit Dashboard",
+        "description": "Complete dashboard with sidebar and charts"
+      },
+      "calendar-block": {
+        "type": "block",
+        "name": "Simple Calendar",
+        "description": "Basic date selection calendar"
+      },
+      "calendar-range": {
+        "type": "block",
+        "name": "Range Calendar",
+        "description": "Date range selection with two months"
+      },
+      "calendar-single": {
+        "type": "block",
+        "name": "Single Date Calendar",
+        "description": "Single date with dropdown navigation"
+      },
+      "chart-bar": {
+        "type": "block",
+        "name": "Bar Chart",
+        "description": "Simple bar chart visualization"
+      },
+      "chart-bar-multiple": {
+        "type": "block",
+        "name": "Multiple Bar Chart",
+        "description": "Grouped bar chart comparison"
+      },
+      "chart-area-step": {
+        "type": "block",
+        "name": "Step Area Chart",
+        "description": "Stepped area chart for trends"
+      }
+    }
+  }
+}
