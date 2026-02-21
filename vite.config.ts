@@ -90,15 +90,6 @@ export default defineConfig(({ mode }) => {
         input: {
           main: path.resolve(__dirname, 'src/pages/index/index.html'),
           'page-not-found': path.resolve(__dirname, 'src/pages/page-not-found/index.html'),
-        
-        
-        
-        
-        
-        
-        
-        
-        
         },
         output: {
           // Smart code splitting - separates vendors for better caching
