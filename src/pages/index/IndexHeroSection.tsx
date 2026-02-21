@@ -41,10 +41,12 @@ export const IndexHeroSection = () => {
           </button>
 
           <a
-            href="/dashboard/"
+            href="https://github.com/software-engineer-404/sasstify-frontend-template"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-semibold rounded-lg border-2 border-gray-200 hover:border-gray-300 transition-all"
           >
-            View Dashboard
+            View on GitHub
           </a>
         </div>
 

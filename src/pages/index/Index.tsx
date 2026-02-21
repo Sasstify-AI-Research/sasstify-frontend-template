@@ -139,19 +139,21 @@ const Index = () => {
               </div>
             )}
 
-            {/* Navigation to Dashboard */}
+            {/* Navigation to Docs */}
             <div className="mt-12 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200 text-center">
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                Want to See More Examples?
+                Want to Use This Template?
               </h4>
               <p className="text-gray-600 mb-4">
-                Visit the Dashboard page to see lazy-loaded modal examples.
+                Explore the source code, documentation, and scaffold scripts on GitHub.
               </p>
               <a
-                href="/dashboard/"
+                href="https://github.com/software-engineer-404/sasstify-frontend-template"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors shadow-md hover:shadow-lg"
               >
-                Go to Dashboard →
+                View on GitHub →
               </a>
             </div>
           </div>
