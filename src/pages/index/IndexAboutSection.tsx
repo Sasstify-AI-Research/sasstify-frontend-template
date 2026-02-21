@@ -56,14 +56,18 @@ export const IndexAboutSection = () => {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="./docs/LAZY_LOADING.md"
+                href="https://github.com/software-engineer-404/sasstify-frontend-template/tree/main/docs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
                 Read the Guide
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/software-engineer-404/sasstify-frontend-template"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white font-medium rounded-lg transition-colors"
               >
                 <Github className="w-5 h-5" />
