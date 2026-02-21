@@ -20,7 +20,7 @@ Responsive site header with navigation.
 ## Import
 
 ```tsx
-import Header from '@/components/header/Header';
+import Header from '@/components/ui/header/Header';
 ```
 
 ---
@@ -100,7 +100,7 @@ Uses Tailwind CSS utility classes. Customize via:
 ## Files
 
 ```
-src/components/header/
+src/components/ui/header/
 ├── Header.tsx           # Component
 └── Header.types.ts      # TypeScript types
 ```

@@ -37,18 +37,17 @@ import { Button } from '@/components/ui/button';
 
 ### Reusable Component
 
-1. **Create folder:**
+Use the scaffold script — never create files manually:
+
 ```bash
-mkdir -p src/components/my-component
+npm run create:component
 ```
 
-2. **Create component file:**
+This generates the component folder, `.tsx`, `.types.ts`, and barrel export automatically. Example of what gets created:
+
 ```typescript
 // src/components/my-component/MyComponent.tsx
-export interface MyComponentProps {
-  title: string;
-  description?: string;
-}
+import type { MyComponentProps } from './MyComponent.types';
 
 export function MyComponent({ title, description }: MyComponentProps) {
   return (
@@ -60,7 +59,6 @@ export function MyComponent({ title, description }: MyComponentProps) {
 }
 ```
 
-3. **Create types file:**
 ```typescript
 // src/components/my-component/MyComponent.types.ts
 export interface MyComponentProps {
@@ -69,17 +67,14 @@ export interface MyComponentProps {
 }
 ```
 
-4. **Use in page:**
+**Use in page:**
 ```typescript
 import { MyComponent } from '@/components/my-component/MyComponent';
 
 export default function MyPage() {
   return (
     <Layout>
-      <MyComponent 
-        title="Hello" 
-        description="This is my component" 
-      />
+      <MyComponent title="Hello" description="This is my component" />
     </Layout>
   );
 }
@@ -87,17 +82,13 @@ export default function MyPage() {
 
 ---
 
-### Page-Specific Component
+### Page-Scoped Component
 
-1. **Create in page folder:**
-```bash
-mkdir -p src/pages/index/components
-```
+Page-specific components live directly in the page folder, prefixed with the page name:
 
-2. **Create component:**
 ```typescript
-// src/pages/index/components/HeroSection.tsx
-export function HeroSection() {
+// src/pages/index/IndexHeroSection.tsx
+export default function IndexHeroSection() {
   return (
     <section className="bg-blue-600 text-white py-20">
       <h1 className="text-5xl font-bold">Welcome</h1>
@@ -107,15 +98,15 @@ export function HeroSection() {
 }
 ```
 
-3. **Use in page:**
+**Use in page:**
 ```typescript
 // src/pages/index/Index.tsx
-import { HeroSection } from './components/HeroSection';
+import IndexHeroSection from './IndexHeroSection';
 
 export default function Index() {
   return (
     <Layout>
-      <HeroSection />
+      <IndexHeroSection />
     </Layout>
   );
 }
@@ -216,11 +207,11 @@ export function Navigation() {
       <a href="/" className="text-blue-600 hover:underline">
         Home
       </a>
-      <a href="/dashboard/" className="text-blue-600 hover:underline">
-        Dashboard
-      </a>
       <a href="/about/" className="text-blue-600 hover:underline">
         About
+      </a>
+      <a href="/contact/" className="text-blue-600 hover:underline">
+        Contact
       </a>
     </nav>
   );
@@ -236,7 +227,7 @@ export function Navigation() {
 **Using useSectionNavigation:**
 ```typescript
 import { useSectionNavigation } from '@/hooks/useSectionNavigation';
-import { Section } from '@/components/section/Section';
+import { Section } from '@/components/ui/section/Section';
 
 export default function Index() {
   const { scrollToSection } = useSectionNavigation({

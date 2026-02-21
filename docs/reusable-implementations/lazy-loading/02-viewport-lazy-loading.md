@@ -12,7 +12,7 @@ This implementation adds **three types of lazy loading patterns** to demonstrate
 
 1. **Button-Click Lazy Loading** - Components load when user clicks (existing chart demo)
 2. **Viewport-Based Lazy Loading** - Sections load when scrolled into view (NEW!)
-3. **Modal Lazy Loading** - Modals load when opened (existing dashboard demo)
+3. **Modal Lazy Loading** - Modals load when opened (interaction-triggered)
 
 ---
 
@@ -26,9 +26,9 @@ src/
 │   ├── ViewportLazyLoad.tsx          # Intersection Observer wrapper
 │   ├── SectionNav.tsx                # Sticky navigation with smooth scroll
 │   ├── sections/
-│   │   ├── HeroSection.tsx           # Above-fold content (always loaded)
-│   │   ├── FeaturesSection.tsx       # Lazy-loaded on scroll
-│   │   └── AboutSection.tsx          # Lazy-loaded on scroll
+│   │   ├── IndexHeroSection.tsx      # Above-fold content (always loaded)
+│   │   ├── IndexFeaturesSection.tsx  # Lazy-loaded on scroll
+│   │   └── IndexAboutSection.tsx     # Lazy-loaded on scroll
 │   └── examples/
 │       ├── HeavyChart.tsx            # Button-click lazy loading
 │       └── LazyModal.tsx             # Modal lazy loading
@@ -48,8 +48,8 @@ dist/static/js/
 ├── ui-vendor.js               6.88 KB (2.98 KB gzip)   # UI components
 ├── main.js                    8.27 KB (2.64 KB gzip)   # Home page + Hero
 ├── Layout.js                  4.23 KB (1.88 KB gzip)   # Layout component
-├── AboutSection.js            4.98 KB (1.37 KB gzip)   # ⚡ Lazy loaded
-├── FeaturesSection.js         3.17 KB (1.35 KB gzip)   # ⚡ Lazy loaded
+├── IndexAboutSection.js      4.98 KB (1.37 KB gzip)   # ⚡ Lazy loaded
+├── IndexFeaturesSection.js   3.17 KB (1.35 KB gzip)   # ⚡ Lazy loaded
 ├── dashboard.js               2.39 KB (1.09 KB gzip)   # Dashboard page
 ├── LazyModal.js               2.69 KB (1.03 KB gzip)   # ⚡ Lazy loaded
 ├── HeavyChart.js              1.69 KB (0.85 KB gzip)   # ⚡ Lazy loaded
@@ -204,9 +204,9 @@ export const SectionNav = () => {
 
 ### 3. Section Components
 
-#### HeroSection (Always Loaded)
+#### IndexHeroSection (Always Loaded)
 
-**File:** `src/components/sections/HeroSection.tsx`
+**File:** `src/pages/index/IndexHeroSection.tsx`
 
 **Why Always Loaded?**
 - Above the fold (visible immediately)
@@ -215,27 +215,27 @@ export const SectionNav = () => {
 
 **Bundle Size:** Included in `main.js` (~8.27 KB gzipped)
 
-#### FeaturesSection (Lazy Loaded)
+#### IndexFeaturesSection (Lazy Loaded)
 
-**File:** `src/components/sections/FeaturesSection.tsx`
+**File:** `src/pages/index/IndexFeaturesSection.tsx`
 
 **Why Lazy Loaded?**
 - Below the fold (not immediately visible)
 - Contains feature cards and descriptions
 - Only needed when user scrolls down
 
-**Bundle Size:** `FeaturesSection.js` (~1.35 KB gzipped)
+**Bundle Size:** `IndexFeaturesSection.js` (~1.35 KB gzipped)
 
-#### AboutSection (Lazy Loaded)
+#### IndexAboutSection (Lazy Loaded)
 
-**File:** `src/components/sections/AboutSection.tsx`
+**File:** `src/pages/index/IndexAboutSection.tsx`
 
 **Why Lazy Loaded?**
 - Far below the fold (bottom of page)
 - Contains additional information
 - Most users may not scroll this far
 
-**Bundle Size:** `AboutSection.js` (~1.37 KB gzipped)
+**Bundle Size:** `IndexAboutSection.js` (~1.37 KB gzipped)
 
 ---
 
@@ -245,11 +245,11 @@ export const SectionNav = () => {
 import { lazy, Suspense } from 'react';
 import SectionNav from '@/components/SectionNav';
 import ViewportLazyLoad from '@/components/ViewportLazyLoad';
-import HeroSection from '@/components/sections/HeroSection';
+import IndexHeroSection from './IndexHeroSection';
 
 // Lazy load sections
-const FeaturesSection = lazy(() => import('@/components/sections/FeaturesSection'));
-const AboutSection = lazy(() => import('@/components/sections/AboutSection'));
+const IndexFeaturesSection = lazy(() => import('./IndexFeaturesSection'));
+const IndexAboutSection = lazy(() => import('./IndexAboutSection'));
 
 const Index = () => {
   return (
@@ -258,12 +258,12 @@ const Index = () => {
       <SectionNav />
 
       {/* Hero - Always Loaded */}
-      <HeroSection />
+      <IndexHeroSection />
 
       {/* Features - Viewport Lazy Loaded */}
       <ViewportLazyLoad>
         <Suspense fallback={<div>Loading features...</div>}>
-          <FeaturesSection />
+          <IndexFeaturesSection />
         </Suspense>
       </ViewportLazyLoad>
 
@@ -275,7 +275,7 @@ const Index = () => {
       {/* About - Viewport Lazy Loaded */}
       <ViewportLazyLoad>
         <Suspense fallback={<div>Loading about...</div>}>
-          <AboutSection />
+          <IndexAboutSection />
         </Suspense>
       </ViewportLazyLoad>
     </Layout>
@@ -309,13 +309,13 @@ Visit `http://localhost:8080` and:
 - `main.js` loads (includes Hero)
 - `react-vendor.js` loads
 - `ui-vendor.js` loads
-- **FeaturesSection.js and AboutSection.js do NOT load yet**
+- **IndexFeaturesSection.js and IndexAboutSection.js do NOT load yet**
 
 **On Scroll to Features:**
-- `FeaturesSection.js` loads when section enters viewport
+- `IndexFeaturesSection.js` loads when section enters viewport
 
 **On Scroll to About:**
-- `AboutSection.js` loads when section enters viewport
+- `IndexAboutSection.js` loads when section enters viewport
 
 ### 3. Performance Testing
 
@@ -446,7 +446,7 @@ import 'intersection-observer'; // Polyfill for older browsers
 This implementation demonstrates three powerful lazy loading patterns:
 
 1. **Button-Click Lazy Loading** (`HeavyChart`) - User-triggered
-2. **Viewport-Based Lazy Loading** (`FeaturesSection`, `AboutSection`) - Scroll-triggered
+2. **Viewport-Based Lazy Loading** (`IndexFeaturesSection`, `IndexAboutSection`) - Scroll-triggered
 3. **Modal Lazy Loading** (`LazyModal`) - Interaction-triggered
 
 **Key Benefits:**

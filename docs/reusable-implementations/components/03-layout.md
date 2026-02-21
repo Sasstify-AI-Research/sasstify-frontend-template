@@ -20,7 +20,7 @@ Page wrapper providing consistent header and footer.
 ## Import
 
 ```tsx
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/blocks/layout/Layout';
 ```
 
 ---
@@ -123,7 +123,7 @@ import Layout from '@/components/layout/Layout';
 ## Files
 
 ```
-src/components/layout/
+src/components/blocks/layout/
 ├── Layout.tsx           # Component
 └── Layout.types.ts      # TypeScript types
 ```

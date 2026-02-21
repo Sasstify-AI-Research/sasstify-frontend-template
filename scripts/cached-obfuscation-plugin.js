@@ -19,6 +19,8 @@ import { ObfuscationCache } from './obfuscation-cache.js';
 export function cachedObfuscation(obfuscatorOptions) {
   let cache;
   let isProduction = false;
+  // Track processed chunks by their key for accurate hash updates
+  const processedChunks = new Map(); // chunkKey -> { wasCached: boolean, chunkName: string }
 
   return {
     name: 'cached-obfuscation',
@@ -54,12 +56,20 @@ export function cachedObfuscation(obfuscatorOptions) {
       if (!chunk.fileName.endsWith('.js')) return null;
       
       const chunkName = chunk.name || chunk.fileName;
+      const chunkKey = cache.generateChunkKey(chunk);
       
       // Try to use cached obfuscated code
       const cachedChunk = cache.getCachedChunk(chunk);
       
       if (cachedChunk) {
-        console.log(`♻️  Reusing cached obfuscated: ${chunkName} (hash: ${cachedChunk.outputHash})`);
+        // Track that this chunk was cached (for generateBundle)
+        processedChunks.set(chunkKey, { 
+          wasCached: true, 
+          chunkName,
+          cachedOutputHash: cachedChunk.outputHash 
+        });
+        
+        console.log(`♻️  Reusing cached obfuscated: ${chunkName} (hash: ${cachedChunk.outputHash || 'pending'})`);
         
         return {
           code: cachedChunk.obfuscatedCode,
@@ -69,6 +79,13 @@ export function cachedObfuscation(obfuscatorOptions) {
       
       // No cache or file changed - obfuscate now
       console.log(`🔒 Obfuscating: ${chunkName}`);
+      
+      // Track that this chunk was newly obfuscated
+      processedChunks.set(chunkKey, { 
+        wasCached: false, 
+        chunkName,
+        cachedOutputHash: null 
+      });
       
       try {
         const obfuscated = JavaScriptObfuscatorLib.obfuscate(
@@ -103,16 +120,19 @@ export function cachedObfuscation(obfuscatorOptions) {
       for (const [fileName, output] of Object.entries(bundle)) {
         if (output.type !== 'chunk') continue;
         
-        const cachedChunk = cache.getCachedChunk(output);
+        const chunkKey = cache.generateChunkKey(output);
+        const processed = processedChunks.get(chunkKey);
         
-        // Extract current hash from filename
-        const currentHashMatch = fileName.match(/\.([a-zA-Z0-9_-]+)\.js$/);
+        // Extract current hash from filename (e.g., static/js/ABC123.js -> ABC123)
+        const currentHashMatch = fileName.match(/\/([a-zA-Z0-9_-]+)\.js$/);
         const currentHash = currentHashMatch ? currentHashMatch[1] : null;
         
-        if (cachedChunk && cachedChunk.outputHash) {
-          // Chunk was cached - restore its original hash
-          if (currentHash && currentHash !== cachedChunk.outputHash) {
-            const newFileName = fileName.replace(currentHash, cachedChunk.outputHash);
+        if (!currentHash) continue;
+        
+        if (processed && processed.wasCached && processed.cachedOutputHash) {
+          // Chunk was cached with a valid hash - restore its original hash
+          if (currentHash !== processed.cachedOutputHash) {
+            const newFileName = fileName.replace(currentHash, processed.cachedOutputHash);
             
             modifications.push({
               oldName: fileName,
@@ -120,8 +140,8 @@ export function cachedObfuscation(obfuscatorOptions) {
               output,
             });
           }
-        } else if (currentHash) {
-          // New chunk - update cache with its hash
+        } else {
+          // New chunk OR cached chunk without hash - update cache with current hash
           cache.updateChunkHash(output, currentHash);
         }
       }

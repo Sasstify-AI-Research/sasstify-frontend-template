@@ -1,16 +1,16 @@
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/blocks/layout/Layout';
 import { lazy, Suspense, useState } from 'react';
 import { BarChart3, Home, Sparkles, Info } from 'lucide-react';
-import Section from '@/components/section/Section';
-import HeroSection from './components/sections/HeroSection';
+import Section from '@/components/ui/section/Section';
+import IndexHeroSection from './IndexHeroSection';
 import { useSectionNavigation } from '@/hooks/useSectionNavigation';
 
 // ✅ Lazy load section components - only load when scrolled into viewport
-const FeaturesSection = lazy(() => import('./components/sections/FeaturesSection'));
-const AboutSection = lazy(() => import('./components/sections/AboutSection'));
+const IndexFeaturesSection = lazy(() => import('./IndexFeaturesSection'));
+const IndexAboutSection = lazy(() => import('./IndexAboutSection'));
 
 // ✅ Lazy load heavy chart component - only loads when button clicked
-const HeavyChart = lazy(() => import('./components/HeavyChart'));
+const IndexHeavyChart = lazy(() => import('./IndexHeavyChart'));
 
 const Index = () => {
   const [showChart, setShowChart] = useState(false);
@@ -77,11 +77,11 @@ const Index = () => {
     >
 
       {/* Hero Section - Always loaded (above fold) */}
-      <HeroSection />
+      <IndexHeroSection />
 
       {/* Features Section - Lazy loaded with reusable Section component */}
       <Section id="features" variant="gray" minHeight="800px" viewportLazyLoad>
-        <FeaturesSection />
+        <IndexFeaturesSection />
       </Section>
 
       {/* Demo Section - Existing lazy loading chart example */}
@@ -134,24 +134,26 @@ const Index = () => {
                     </div>
                   }
                 >
-                  <HeavyChart />
+                  <IndexHeavyChart />
                 </Suspense>
               </div>
             )}
 
-            {/* Navigation to Dashboard */}
+            {/* Navigation to Docs */}
             <div className="mt-12 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200 text-center">
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                Want to See More Examples?
+                Want to Use This Template?
               </h4>
               <p className="text-gray-600 mb-4">
-                Visit the Dashboard page to see lazy-loaded modal examples.
+                Explore the source code, documentation, and scaffold scripts on GitHub.
               </p>
               <a
-                href="/dashboard/"
+                href="https://github.com/software-engineer-404/sasstify-frontend-template"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors shadow-md hover:shadow-lg"
               >
-                Go to Dashboard →
+                View on GitHub →
               </a>
             </div>
           </div>
@@ -159,7 +161,7 @@ const Index = () => {
 
       {/* About Section - Lazy loaded with reusable Section component */}
       <Section id="about" variant="white" minHeight="900px" viewportLazyLoad>
-        <AboutSection />
+        <IndexAboutSection />
       </Section>
     </Layout>
   );

@@ -56,7 +56,7 @@ transforming...
 ♻️  Reusing cached obfuscated: react-vendor (Dj7pr43P)
 ♻️  Reusing cached obfuscated: vendor (LIZo4OzT)
 🔒 Newly obfuscated: main (BDsDggUV)
-♻️  Reusing cached obfuscated: dashboard (C3cfMgm3)
+♻️  Reusing cached obfuscated: page-not-found (C3cfMgm3)
 
 rendering chunks...
 computing gzip size...
@@ -82,7 +82,7 @@ dist/static/js/BDsDggUV.js       12.45 kB │ gzip:   5.23 kB
 🔨 Starting post-build cleanup...
 📦 Copying dist/src/pages/* to dist/...
   ✓ Copying index/ to dist/
-  ✓ Copying dashboard/ to dist/dashboard/
+  ✓ Copying page-not-found/ to dist/page-not-found/
 ✅ Post-build cleanup complete!
 ```
 

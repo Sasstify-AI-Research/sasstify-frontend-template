@@ -79,7 +79,7 @@ const Modal = lazy(() => import('./Modal'));
 
 **Viewport Lazy Loading:**
 ```tsx
-import Section from '@/components/section/Section';
+import Section from '@/components/ui/section/Section';
 
 <Section id="features" viewportLazyLoad>
   <FeaturesContent />
@@ -92,7 +92,7 @@ import Section from '@/components/section/Section';
 
 ### Layout
 ```tsx
-import Layout from '@/components/layout/Layout';
+import Layout from '@/components/blocks/layout/Layout';
 
 <Layout fixedHeader={true}>
   <YourPageContent />
@@ -101,7 +101,7 @@ import Layout from '@/components/layout/Layout';
 
 ### Section
 ```tsx
-import Section from '@/components/section/Section';
+import Section from '@/components/ui/section/Section';
 
 <Section 
   id="about" 

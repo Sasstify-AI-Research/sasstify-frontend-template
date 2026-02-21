@@ -96,7 +96,7 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 ### Viewport-Based Lazy Loading
 
 ```typescript
-import { Section } from '@/components/section/Section';
+import { Section } from '@/components/ui/section/Section';
 
 <Section
   id="features"

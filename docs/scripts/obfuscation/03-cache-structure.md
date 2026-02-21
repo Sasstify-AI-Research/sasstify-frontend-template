@@ -450,7 +450,7 @@ cat .vite-cache/obfuscation-cache.json | jq '.chunks[] | select(.chunkName=="mai
 ```
 ♻️  Reusing cached obfuscated: react-vendor (Dj7pr43P)
 ♻️  Reusing cached obfuscated: main (BDsDggUV)
-🔒 Newly obfuscated: dashboard (C3cfMgm3)
+🔒 Newly obfuscated: page-not-found (C3cfMgm3)
 
 📊 Obfuscation Cache Statistics:
    Cached & reused:  13 chunks

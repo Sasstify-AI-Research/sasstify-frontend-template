@@ -33,7 +33,7 @@ npm run build
 ```
 dist/
 ├── index.html                     (~2 KB)
-├── dashboard/
+├── page-not-found/
 │   └── index.html                 (~2 KB)
 └── static/
     ├── js/

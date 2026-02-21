@@ -260,7 +260,7 @@ Cache-Control: no-cache
 
 **For:**
 - `/index.html`
-- `/dashboard/index.html`
+- `/page-not-found/index.html`
 
 **Why:**
 - Always check for updates

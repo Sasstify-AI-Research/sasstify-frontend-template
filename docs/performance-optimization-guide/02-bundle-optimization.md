@@ -300,7 +300,7 @@ main.js: 300 KB (100 KB gzipped)
 Lazy load below-the-fold content:
 
 ```typescript
-const AboutSection = lazy(() => import('./AboutSection'));
+const IndexAboutSection = lazy(() => import('./IndexAboutSection'));
 const ContactForm = lazy(() => import('./ContactForm'));
 ```
 

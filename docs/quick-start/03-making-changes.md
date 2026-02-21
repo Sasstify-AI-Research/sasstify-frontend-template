@@ -20,7 +20,7 @@ Learn how to edit pages, add new pages, and use components.
 **File:** `src/pages/index/Index.tsx`
 
 ```typescript
-import { Layout } from '@/components/layout/layout/Layout';
+import { Layout } from '@/components/blocks/layout/Layout';
 
 export default function Index() {
   return (
@@ -40,18 +40,18 @@ export default function Index() {
 
 ---
 
-### Dashboard Page
+### 404 Page
 
-**File:** `src/pages/dashboard/Dashboard.tsx`
+**File:** `src/pages/page-not-found/PageNotFound.tsx`
 
 ```typescript
-import { Layout } from '@/components/layout/layout/Layout';
+import Layout from '@/components/blocks/layout/Layout';
 
-export default function Dashboard() {
+export default function PageNotFound() {
   return (
     <Layout>
-      <h1>Dashboard</h1>
-      <p>Your dashboard content here</p>
+      <h1>404 — Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
     </Layout>
   );
 }
@@ -129,7 +129,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 4. **Create page component:**
 ```typescript
 // src/pages/about/About.tsx
-import { Layout } from '@/components/layout/layout/Layout';
+import { Layout } from '@/components/blocks/layout/Layout';
 
 export default function About() {
   return (
@@ -141,13 +141,13 @@ export default function About() {
 }
 ```
 
-5. **Update vite.config.ts:**
+5. **Update vite.config.ts** (handled automatically by `npm run create:page`):
 ```typescript
-// Add to rollupOptions.input
+// Added to rollupOptions.input by create-page.js
 input: {
   main: resolve(__dirname, 'src/pages/index/index.html'),
-  dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
-  about: resolve(__dirname, 'src/pages/about/index.html'), // Add this
+  'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
+  about: resolve(__dirname, 'src/pages/about/index.html'), // auto-added
 },
 ```
 
@@ -159,7 +159,7 @@ input: {
 
 **Wrap all pages:**
 ```typescript
-import { Layout } from '@/components/layout/layout/Layout';
+import { Layout } from '@/components/blocks/layout/Layout';
 
 export default function MyPage() {
   return (
@@ -178,7 +178,7 @@ export default function MyPage() {
 
 **Create page sections:**
 ```typescript
-import { Section } from '@/components/section/Section';
+import { Section } from '@/components/ui/section/Section';
 
 export default function MyPage() {
   return (
@@ -204,7 +204,7 @@ export default function MyPage() {
 
 **Lazy load content:**
 ```typescript
-import { ViewportLazyLoad } from '@/components/viewport-lazy-load/ViewportLazyLoad';
+import { ViewportLazyLoad } from '@/components/ui/viewport-lazy-load/ViewportLazyLoad';
 
 export default function MyPage() {
   return (
@@ -325,7 +325,7 @@ export function MyComponent() {
 }
 ```
 
-**Note:** This file is imported in `src/components/header/Header.tsx`, which is part of the `Layout` component, so it's automatically included on all pages.
+**Note:** This file is imported in `src/components/ui/header/Header.tsx`, which is part of the `Layout` component, so it's automatically included on all pages.
 
 **Alternative:** For page-specific styles, create a `.module.css` file in the page directory.
 

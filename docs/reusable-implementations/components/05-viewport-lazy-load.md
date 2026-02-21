@@ -23,7 +23,7 @@ Lazy loads content when it enters the viewport.
 ## Import
 
 ```tsx
-import ViewportLazyLoad from '@/components/viewport-lazy-load/ViewportLazyLoad';
+import ViewportLazyLoad from '@/components/ui/viewport-lazy-load/ViewportLazyLoad';
 ```
 
 ---
@@ -77,7 +77,7 @@ import ViewportLazyLoad from '@/components/viewport-lazy-load/ViewportLazyLoad';
 ### Basic Usage
 ```tsx
 <ViewportLazyLoad>
-  <FeaturesSection />
+  <IndexFeaturesSection />
 </ViewportLazyLoad>
 ```
 
@@ -94,7 +94,7 @@ import ViewportLazyLoad from '@/components/viewport-lazy-load/ViewportLazyLoad';
   threshold={0.3}       // 30% visible
   rootMargin="200px"    // 200px before viewport
 >
-  <AboutSection />
+  <IndexAboutSection />
 </ViewportLazyLoad>
 ```
 
@@ -190,7 +190,7 @@ Sections load as user scrolls
 ## 📂 Files
 
 ```
-src/components/viewport-lazy-load/
+src/components/ui/viewport-lazy-load/
 ├── ViewportLazyLoad.tsx        # Component
 └── ViewportLazyLoad.types.ts   # TypeScript types
 ```

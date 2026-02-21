@@ -39,27 +39,25 @@ sasstify-frontend-template/
 
 ```
 src/pages/
-├── index/                  ← Index page (/)
-│   ├── index.html          ← HTML entry point
-│   ├── main.tsx            ← React entry point
-│   ├── Index.tsx           ← Page component
-│   ├── Index.module.css    ← Page-specific styles
-│   └── components/         ← Page-specific components
-│       ├── HeroSection.tsx
-│       ├── FeaturesSection.tsx
-│       └── AboutSection.tsx
-└── dashboard/              ← Dashboard page (/dashboard/)
+├── index/                      ← Index page (/)
+│   ├── index.html              ← HTML entry point
+│   ├── main.tsx                ← React entry point
+│   ├── Index.tsx               ← Page component
+│   ├── IndexHeroSection.tsx    ← Page-scoped section component
+│   ├── IndexFeaturesSection.tsx
+│   ├── IndexAboutSection.tsx
+│   └── IndexHeavyChart.tsx
+└── page-not-found/             ← 404 page (/page-not-found/)
     ├── index.html
     ├── main.tsx
-    ├── Dashboard.tsx
-    └── Dashboard.module.css
+    └── PageNotFound.tsx
 ```
 
 **Key Points:**
-- Each page has its own directory
-- Each page has `index.html` + `main.tsx` + `[Page].tsx`
-- Page-specific components go in `components/` subfolder
+- Each page has its own directory with `index.html` + `main.tsx` + `[Page].tsx`
+- Page-scoped components live directly in the page folder, prefixed with the page name (e.g. `Index*`)
 - URLs map directly: `pages/about/` → `/about/`
+- Use `npm run create:page` to scaffold new pages — never create manually
 
 ---
 
@@ -67,29 +65,28 @@ src/pages/
 
 ```
 src/components/
-├── layout/                 ← Layout components
+├── blocks/                     ← Full-page layout blocks
 │   └── layout/
 │       ├── Layout.tsx
 │       └── Layout.types.ts
-├── header/                 ← Header component
-│   └── header/
-│       ├── Header.tsx
-│       └── Header.types.ts
-├── footer/                 ← Footer component
-│   └── footer/
-│       ├── Footer.tsx
-│       └── Footer.types.ts
-├── section/                ← Section wrapper
-│   └── Section.tsx
-└── viewport-lazy-load/     ← Lazy loading wrapper
-    ├── ViewportLazyLoad.tsx
-    └── ViewportLazyLoad.types.ts
+└── ui/                         ← Primitive UI components
+    ├── header/
+    │   ├── Header.tsx
+    │   └── Header.types.ts
+    ├── footer/
+    │   └── Footer.tsx
+    ├── section/
+    │   ├── Section.tsx
+    │   └── Section.types.ts
+    └── viewport-lazy-load/
+        ├── ViewportLazyLoad.tsx
+        └── ViewportLazyLoad.types.ts
 ```
 
 **Key Points:**
-- Only truly **reusable** components go here
-- Page-specific components stay in `pages/[page]/components/`
-- Each component has its own folder
+- `blocks/` — full-width layout wrappers (e.g. `Layout`)
+- `ui/` — primitive, reusable UI components (header, footer, section, lazy-load)
+- Use `npm run create:block`, `npm run create:ui-component`, or `npm run create:component` to scaffold — never create manually
 - Types in separate `.types.ts` files
 
 **[→ Component documentation](../reusable-implementations/)**
@@ -197,8 +194,8 @@ After running `npm run build`:
 ```
 dist/
 ├── index.html                     ← Index page
-├── dashboard/
-│   └── index.html                 ← Dashboard page
+├── page-not-found/
+│   └── index.html                 ← 404 page
 └── static/
     ├── js/
     │   ├── CNkZXMZn.js            ← Query vendor chunk (~2.5 KB gzipped)
@@ -256,10 +253,10 @@ TypeScript path aliases configured:
 
 ```typescript
 // Instead of:
-import { Header } from '../../../components/header/header/Header';
+import { Header } from '../../../components/ui/header/Header';
 
 // You can use:
-import { Header } from '@/components/header/header/Header';
+import { Header } from '@/components/ui/header/Header';
 ```
 
 **Alias:** `@/` → `src/`

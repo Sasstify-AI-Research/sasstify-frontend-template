@@ -17,7 +17,7 @@ Simple site footer.
 ## Import
 
 ```tsx
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/ui/footer/Footer';
 ```
 
 ---
@@ -42,7 +42,7 @@ import Footer from '@/components/footer/Footer';
 ## Files
 
 ```
-src/components/footer/
+src/components/ui/footer/
 └── Footer.tsx           # Component
 ```
 

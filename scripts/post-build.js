@@ -116,13 +116,4 @@ if (existsSync(indexPath) && dirExists(indexPath)) {
 }
 
 console.log('✅ Post-build cleanup complete!');
-console.log('\n📁 Final structure:');
-console.log('  dist/');
-console.log('  ├── index.html');
-console.log('  ├── dashboard/');
-console.log('  │   └── index.html');
-console.log('  └── static/');
-console.log('      ├── css/');
-console.log('      ├── js/');
-console.log('      └── ...');
 

@@ -1,7 +1,4 @@
-import Layout from '@/components/layout/Layout';
-import { ArrowLeft } from 'lucide-react';
-
-
+import Layout from '@/components/blocks/layout/Layout';
 const PageNotFound = () => {
   return (
     <Layout fixedHeader={true}>

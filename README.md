@@ -104,14 +104,17 @@ npm run type-check       # Run TypeScript type checking
 ```
 sasstify-frontend-template/
 ├── src/
-│   ├── components/       # Reusable components (Layout, Header, Footer, Section)
+│   ├── components/
+│   │   ├── blocks/       # Full-page layout blocks (Layout)
+│   │   └── ui/           # Primitive UI components (Header, Footer, Section, ViewportLazyLoad)
 │   ├── pages/            # Multi-page application
 │   │   ├── index/        # Index page with index.html + main.tsx + Index.tsx
-│   │   └── dashboard/    # Dashboard page with index.html + main.tsx + Dashboard.tsx
+│   │   └── page-not-found/ # 404 page
 │   ├── hooks/            # Custom React hooks (useSectionNavigation, use-mobile)
 │   └── utils/            # Utility functions (smoothScroll)
 ├── public/               # Static assets & global CSS
-├── scripts/              # Build scripts (create-page, delete-page, post-build)
+├── scripts/              # Scaffold & automation scripts (create/delete page, component, block, ui-component)
+├── tests/                # Unit, integration (vitest) and e2e (Playwright) tests
 ├── docs/                 # Complete documentation
 ├── changelog/            # Release notes and version history
 ├── vite.config.ts        # Vite configuration
@@ -208,6 +211,7 @@ Built with:
 - 🚀 **[Quick Start Guide](./docs/quick-start/)** - Get started in 5 minutes
 - 🔧 **[Build Guide](./docs/production-build/)** - Production build pipeline
 - ⚡ **[Performance Guide](./docs/performance-optimization-guide/)** - Optimization tips
+- 🤖 **[AI-Assisted UI Development](./docs/ai-assisted-ui-development/README.md)** - Structure & workflows for safe AI copilots
 
 ### Project Management
 - 🗺️ **[Roadmap](./ROADMAP.md)** - Future plans and feature timeline
