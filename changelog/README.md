@@ -26,6 +26,7 @@ This changelog tracks all notable changes to the **Sasstify Frontend Template** 
 
 | Version | Date | Type | Document |
 |---------|------|------|----------|
+| [1.1.4](./v1.1.4.md) | 2026-02-21 | Patch Release | [View Release Notes](./v1.1.4.md) |
 | [1.1.3](./v1.1.3.md) | 2026-02-21 | Patch Release | [View Release Notes](./v1.1.3.md) |
 | [1.1.2](./v1.1.2.md) | 2026-02-21 | Patch Release | [View Release Notes](./v1.1.2.md) |
 | [1.1.1](./v1.1.1.md) | 2026-02-21 | Patch Release | [View Release Notes](./v1.1.1.md) |
@@ -69,7 +70,7 @@ We follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html):
 
 ## Quick Links
 
-- **Latest Release:** [v1.1.3](./v1.1.3.md)
+- **Latest Release:** [v1.1.4](./v1.1.4.md)
 - **Project README:** [../README.md](../README.md)
 - **Roadmap:** [../ROADMAP.md](../ROADMAP.md)
 - **Contributing:** [../docs/contributing/](../docs/contributing/)
