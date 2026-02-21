@@ -252,9 +252,9 @@ Components are grouped by their folder name:
 
 | Path | Group Name |
 |------|------------|
-| `src/components/header/Header.tsx` | `header` |
+| `src/components/ui/header/Header.tsx` | `header` |
 | `src/components/ui/button/Button.tsx` | `ui/button` |
-| `src/components/layout/Layout.tsx` | `layout` |
+| `src/components/blocks/layout/Layout.tsx` | `layout` |
 
 ### Protected Dependencies
 

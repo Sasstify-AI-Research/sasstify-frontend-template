@@ -323,7 +323,7 @@ npm run preview  # Use preview server
 ```
 
 **For custom server:**
-- Ensure `/dashboard/` serves `/dashboard/index.html`
+- Ensure `/page-not-found/` serves `/page-not-found/index.html`
 - No SPA fallback needed (this is MPA)
 
 ---

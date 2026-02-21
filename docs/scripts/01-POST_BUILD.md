@@ -35,10 +35,10 @@ npm run build
 BEFORE (after vite build)          AFTER (post-build)
 dist/                               dist/
 ├── src/                            ├── index.html
-│   └── pages/                      ├── dashboard/
+│   └── pages/                      ├── page-not-found/
 │       ├── index/                  │   └── index.html
 │       │   └── index.html          ├── profile/
-│       ├── dashboard/              │   └── index.html
+│       ├── page-not-found/              │   └── index.html
 │       │   └── index.html          ├── page/
 │       ├── profile/                │   └── index.html
 │       │   └── index.html          └── static/
@@ -49,7 +49,7 @@ dist/                               dist/
     └── js/
 ```
 
-**Result:** Clean URLs like `/dashboard/` instead of `/src/pages/dashboard/`
+**Result:** Clean URLs like `/about/` instead of `/src/pages/about/`
 
 ---
 
@@ -58,7 +58,7 @@ dist/                               dist/
 **Step 1: Copy Pages**
 ```javascript
 dist/src/pages/index/        → dist/
-dist/src/pages/dashboard/    → dist/dashboard/
+dist/src/pages/page-not-found/    → dist/page-not-found/
 dist/src/pages/profile/      → dist/profile/
 dist/src/pages/page/         → dist/page/
 ```
@@ -85,7 +85,7 @@ dist/robots.txt      // Keep SEO config
 ```bash
 🔨 Starting post-build cleanup...
 📦 Copying dist/src/pages/* to dist/...
-  ✓ Copying dashboard/ to dist/dashboard/
+  ✓ Copying page-not-found/ to dist/page-not-found/
   ✓ Copying index/ to dist/
   ✓ Copying page/ to dist/page/
   ✓ Copying profile/ to dist/profile/
@@ -97,7 +97,7 @@ dist/robots.txt      // Keep SEO config
 📁 Final structure:
   dist/
   ├── index.html
-  ├── dashboard/
+  ├── page-not-found/
   │   └── index.html
   ├── profile/
   │   └── index.html
@@ -120,7 +120,7 @@ dist/robots.txt      // Keep SEO config
 **Dev URLs:**
 ```
 http://localhost:8080/              → src/pages/index/index.html
-http://localhost:8080/dashboard/    → src/pages/dashboard/index.html
+http://localhost:8080/about/    → src/pages/about/index.html
 http://localhost:8080/profile/      → src/pages/profile/index.html
 ```
 
@@ -132,7 +132,7 @@ http://localhost:8080/profile/      → src/pages/profile/index.html
 
 ```
 https://example.com/              → dist/index.html
-https://example.com/dashboard/    → dist/dashboard/index.html
+https://example.com/about/    → dist/page-not-found/index.html
 https://example.com/profile/      → dist/profile/index.html
 https://example.com/page/         → dist/page/index.html
 ```
@@ -147,12 +147,12 @@ https://example.com/page/         → dist/page/index.html
 
 **Vite outputs to:**
 ```
-dist/src/pages/dashboard/index.html
+dist/src/pages/page-not-found/index.html
 ```
 
 **Would require URLs like:**
 ```
-https://example.com/src/pages/dashboard/
+https://example.com/src/pages/page-not-found/
 ```
 
 ❌ **Ugly, exposes internal structure**
@@ -163,12 +163,12 @@ https://example.com/src/pages/dashboard/
 
 **After post-build:**
 ```
-dist/dashboard/index.html
+dist/page-not-found/index.html
 ```
 
 **Clean URLs:**
 ```
-https://example.com/dashboard/
+https://example.com/about/
 ```
 
 ✅ **Professional, SEO-friendly**
@@ -271,14 +271,14 @@ fs.writeFileSync(
 ### Issue: Pages Not Found After Build
 
 **Symptoms:**
-- `/dashboard/` returns 404
+- `/about/` returns 404
 - Only root page works
 
 **Diagnosis:**
 ```bash
 # Check if post-build ran
 ls dist/
-# Should see: index.html, dashboard/, profile/, etc.
+# Should see: index.html, page-not-found/, about/, etc.
 
 # If you see: src/
 # Post-build didn't run or failed

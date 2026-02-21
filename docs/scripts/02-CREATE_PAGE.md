@@ -182,13 +182,13 @@ src/pages/[page]/              ← New directory
 // Before
 input: {
   main: resolve(__dirname, 'src/pages/index/index.html'),
-  dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+  'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
 }
 
 // After
 input: {
   main: resolve(__dirname, 'src/pages/index/index.html'),
-  dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+  'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
   'user-profile': resolve(__dirname, 'src/pages/user-profile/index.html'),  // ← ADDED
 }
 ```
@@ -768,7 +768,7 @@ npm run dev
    ```typescript
    input: {
      main: resolve(__dirname, 'src/pages/index/index.html'),
-     dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+     'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
      // Add this line if missing:
      'your-page': resolve(__dirname, 'src/pages/your-page/index.html'),
    }

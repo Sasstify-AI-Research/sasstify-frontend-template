@@ -148,7 +148,7 @@ If you add more pages:
 import { lazy } from 'react';
 
 const Index = lazy(() => import('./pages/index/Index'));
-const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'));
+const About = lazy(() => import('./pages/about/About'));
 const Profile = lazy(() => import('./pages/profile/Profile'));
 const Settings = lazy(() => import('./pages/settings/Settings'));
 

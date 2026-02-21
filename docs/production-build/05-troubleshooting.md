@@ -259,7 +259,7 @@ git status
 
 ### Pages Not Found
 
-**Issue:** `/dashboard/` returns 404
+**Issue:** `/about/` returns 404
 
 **Causes:**
 
@@ -286,7 +286,7 @@ ls -R dist/
 
 # Should have:
 # dist/index.html
-# dist/dashboard/index.html
+# dist/page-not-found/index.html
 ```
 
 ---

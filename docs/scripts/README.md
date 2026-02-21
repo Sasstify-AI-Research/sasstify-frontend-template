@@ -557,7 +557,7 @@ npm run preview          # 3. Verify removal
 - Delete unused pages to keep project clean
 
 ❌ **DON'T:**
-- Delete core pages (index, dashboard)
+- Delete core pages (index, page-not-found)
 - Use spaces or special characters in names
 - Create pages with the same name as existing pages
 

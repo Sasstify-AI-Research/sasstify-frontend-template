@@ -180,7 +180,7 @@ rendering chunks...
 computing gzip size...
 
 dist/index.html                        1.01 kB │ gzip:   0.43 kB
-dist/dashboard/index.html              0.97 kB │ gzip:   0.40 kB
+dist/page-not-found/index.html              0.97 kB │ gzip:   0.40 kB
 dist/static/css/DSJ3S4vk.css          23.62 kB │ gzip:   4.72 kB
 dist/static/js/CNkZXMZn.js             4.71 kB │ gzip:   2.45 kB
 dist/static/js/LIZo4OzT.js           108.52 kB │ gzip:  44.99 kB
@@ -207,8 +207,8 @@ dist/static/js/Dj7pr43P.js           770.32 kB │ gzip: 315.00 kB
 ```
 dist/
 ├── index.html                    # Root page (/)
-├── dashboard/
-│   └── index.html               # Dashboard (/dashboard/)
+├── page-not-found/
+│   └── index.html               # 404 page (/page-not-found/)
 ├── profile/
 │   └── index.html               # Profile (/profile/)
 ├── page/

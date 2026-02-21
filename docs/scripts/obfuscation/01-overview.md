@@ -126,7 +126,7 @@ main.abc123.js  ← SAME HASH! (reused cached obfuscated code)
 ```
 🔒 Obfuscating: react-vendor
 🔒 Obfuscating: main
-🔒 Obfuscating: dashboard
+🔒 Obfuscating: page-not-found
 ... (14 chunks total)
 
 Output:
@@ -140,7 +140,7 @@ Output:
 ```
 ♻️  Reusing cached obfuscated: react-vendor (62LMF1_C)
 ♻️  Reusing cached obfuscated: main (BBQtSsWE)
-♻️  Reusing cached obfuscated: dashboard (CIbWqRGr)
+♻️  Reusing cached obfuscated: page-not-found (CIbWqRGr)
 ... (14 chunks total)
 
 Output:

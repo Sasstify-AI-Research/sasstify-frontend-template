@@ -60,12 +60,12 @@ Phase 3: Deployment
 
 **Problem:** Vite preserves source structure in output
 ```
-dist/src/pages/dashboard/index.html  ❌ (exposes internal structure)
+dist/src/pages/page-not-found/index.html  ❌ (exposes internal structure)
 ```
 
 **Solution:** Post-build flattens structure
 ```
-dist/dashboard/index.html  ✅ (clean, production-ready)
+dist/page-not-found/index.html  ✅ (clean, production-ready)
 ```
 
 ---
@@ -80,7 +80,7 @@ dist/dashboard/index.html  ✅ (clean, production-ready)
 ```
 SOURCE                                   DESTINATION
 dist/src/pages/index/index.html    →    dist/index.html
-dist/src/pages/dashboard/index.html →   dist/dashboard/index.html
+dist/src/pages/page-not-found/index.html →   dist/page-not-found/index.html
 dist/src/pages/profile/index.html   →   dist/profile/index.html
 dist/src/pages/page/index.html      →   dist/page/index.html
 ```
@@ -97,7 +97,7 @@ dist/src/pages/page/index.html      →   dist/page/index.html
 - `dist/static/` - All hashed assets (JS, CSS, images)
 - `dist/favicon.ico` - Site favicon
 - `dist/robots.txt` - SEO configuration
-- All page directories (`dashboard/`, `profile/`, etc.)
+- All page directories (`page-not-found/`, `about/`, etc.)
 
 ---
 
@@ -124,12 +124,12 @@ dist/static/ (preserved)
 
 **Before Post-Build:**
 ```
-/src/pages/dashboard/    ❌ (internal structure exposed)
+/src/pages/page-not-found/    ❌ (internal structure exposed)
 ```
 
 **After Post-Build:**
 ```
-/dashboard/              ✅ (clean, SEO-friendly)
+/about/              ✅ (clean, SEO-friendly)
 ```
 
 **Benefits:**
@@ -145,8 +145,8 @@ dist/static/ (preserved)
 ```
 dist/
 ├── index.html                    # Root page (/)
-├── dashboard/
-│   └── index.html               # Dashboard page (/dashboard/)
+├── page-not-found/
+│   └── index.html               # 404 page (/page-not-found/)
 ├── profile/
 │   └── index.html               # Profile page (/profile/)
 ├── page/
@@ -175,7 +175,7 @@ dist/
 ```
 🔨 Starting post-build cleanup...
 📦 Copying dist/src/pages/* to dist/...
-  ✓ Copying dashboard/ to dist/dashboard/
+  ✓ Copying page-not-found/ to dist/page-not-found/
   ✓ Copying index/ to dist/
   ✓ Copying page/ to dist/page/
   ✓ Copying profile/ to dist/profile/
@@ -187,7 +187,7 @@ dist/
 📁 Final structure:
   dist/
   ├── index.html
-  ├── dashboard/
+  ├── page-not-found/
   │   └── index.html
   └── static/
       ├── css/
@@ -205,7 +205,7 @@ Each page is independently accessible:
 
 ```
 http://example.com/              → dist/index.html
-http://example.com/dashboard/    → dist/dashboard/index.html
+http://example.com/page-not-found/    → dist/page-not-found/index.html
 http://example.com/profile/      → dist/profile/index.html
 http://example.com/page/         → dist/page/index.html
 ```

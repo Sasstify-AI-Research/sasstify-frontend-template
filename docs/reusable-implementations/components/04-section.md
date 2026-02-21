@@ -23,7 +23,7 @@ Reusable section wrapper with lazy loading support.
 ## Import
 
 ```tsx
-import Section from '@/components/section/Section';
+import Section from '@/components/ui/section/Section';
 ```
 
 ---
@@ -223,7 +223,7 @@ When using `viewportLazyLoad`:
 ## 📂 Files
 
 ```
-src/components/section/
+src/components/ui/section/
 ├── Section.tsx           # Component
 └── Section.types.ts      # TypeScript types
 ```

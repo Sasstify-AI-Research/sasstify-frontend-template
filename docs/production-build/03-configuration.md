@@ -63,7 +63,7 @@ build: {
   rollupOptions: {
     input: {
       main: resolve(__dirname, 'src/pages/index/index.html'),
-      dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+      'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
       profile: resolve(__dirname, 'src/pages/profile/index.html'),
       page: resolve(__dirname, 'src/pages/page/index.html'),
     }
@@ -334,7 +334,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/pages/index/index.html'),
-        dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+        'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
       },
       output: {
         assetFileNames: 'static/[ext]/[hash][extname]',

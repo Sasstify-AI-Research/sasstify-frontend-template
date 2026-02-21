@@ -77,7 +77,7 @@ build: {
   rollupOptions: {
     input: {
       main: resolve(__dirname, 'src/pages/index/index.html'),
-      dashboard: resolve(__dirname, 'src/pages/dashboard/index.html'),
+      'page-not-found': resolve(__dirname, 'src/pages/page-not-found/index.html'),
       profile: resolve(__dirname, 'src/pages/profile/index.html'),
       page: resolve(__dirname, 'src/pages/page/index.html'),
     }
@@ -335,7 +335,7 @@ transforming...
 ♻️  Reusing cached obfuscated: ui-vendor (iKnrhT8c)
 ♻️  Reusing cached obfuscated: vendor (LIZo4OzT)
 ♻️  Reusing cached obfuscated: main (BDsDggUV)
-♻️  Reusing cached obfuscated: dashboard (C3cfMgm3)
+♻️  Reusing cached obfuscated: page-not-found (C3cfMgm3)
 
 rendering chunks...
 computing gzip size...
@@ -375,7 +375,7 @@ dist/static/js/Dj7pr43P.js           770.32 kB │ gzip: 315.00 kB
 
 **Note:** "Application Code" refers to the sample pages already created in this template:
 - `index` - Main landing page
-- `dashboard` - Dashboard page
+- `page-not-found` - 404 page
 - `profile` - User profile page
 - `page` - Example page
 
