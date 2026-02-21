@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from "path";
 import { visualizer } from 'rollup-plugin-visualizer';
 import { cachedObfuscation } from './scripts/cached-obfuscation-plugin.js';
+import viteCompression from 'vite-plugin-compression';
 
 // Custom plugin to flatten HTML output paths
 function htmlOutputPlugin(): Plugin {
@@ -59,6 +60,9 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
 
   return {
+    // Base path — override via BASE_URL env var for GitHub Pages sub-path deployments
+    base: process.env.BASE_URL ?? '/',
+
     // Development server configuration
     server: {
       host: "::",
@@ -224,6 +228,12 @@ export default defineConfig(({ mode }) => {
           seed: 0,
           reservedStrings: ['@/', '\\./', 'components', 'pages', '/src/'],
         }),
+      ] : []),
+
+      // Brotli + gzip compression for production assets
+      ...(isProduction ? [
+        viteCompression({ algorithm: 'brotliCompress', ext: '.br' }),
+        viteCompression({ algorithm: 'gzip', ext: '.gz' }),
       ] : []),
 
       // Bundle analyzer (only in production when enabled)

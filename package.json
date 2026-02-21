@@ -2,6 +2,10 @@
   "name": "exit",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "description": "Sasstify frontend template is a purpose-built frontend template designed to seamlessly transform Loveable Dev’s AI-generated code into a production-ready static web app — optimized for lightning-fast deployment, scalability, and simplicity.",
   "homepage": "https://github.com/Sasstify-AI-Research/sasstify-frontend-template#readme",
   "bugs": {
