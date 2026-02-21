@@ -10,7 +10,6 @@ import {
   fileExists,
   dirExists,
   readFile,
-  cleanupTestArtifacts,
   cleanupAllTestArtifacts,
   getUIComponentPath,
   getComponentPath,
@@ -1010,9 +1009,10 @@ describe('delete-ui-component script', () => {
       const pascalUI1 = toPascalCase(ui1);
       addImportToUIComponent(ui2, `import ${pascalUI1} from '@/components/ui/${ui1}/${pascalUI1}';`);
       
-      // Try to delete ui1 (used by ui2)
+      // Try to delete ui1 (used by ui2) — may succeed with a warning or be prevented
       const result1 = runScript('delete:ui-component', `--name=${ui1} --yes`);
-      
+      expect(result1).toBeDefined();
+
       // Delete ui2 first (not used by anyone)
       const result2 = runScript('delete:ui-component', `--name=${ui2} --yes`);
       expect(result2.success).toBe(true);

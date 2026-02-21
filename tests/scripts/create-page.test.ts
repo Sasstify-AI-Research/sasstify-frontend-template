@@ -12,7 +12,6 @@ import {
   cleanupAllTestArtifacts,
   getPagePath,
   getE2eTestPath,
-  viteConfigHasPage,
   toPascalCase,
   generateTestName,
   TEST_PREFIX,

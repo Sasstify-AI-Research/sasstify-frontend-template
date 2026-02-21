@@ -356,7 +356,7 @@ export function addImportToFile(filePath: string, importStatement: string): bool
     content = `${importStatement}\n${content}`;
     fs.writeFileSync(filePath, content);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -382,7 +382,7 @@ export function addDependencyUsage(filePath: string, usageCode: string): boolean
     content = content.slice(0, returnIndex) + usageCode + '\n  ' + content.slice(returnIndex);
     fs.writeFileSync(filePath, content);
     return true;
-  } catch (e) {
+  } catch {
     return false;
   }
 }
@@ -427,7 +427,7 @@ export function cleanupAllTestArtifacts(): void {
       if (matchesTestPattern(dir)) {
         try {
           fs.rmSync(path.join(pagesDir, dir), { recursive: true, force: true });
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
   }
@@ -439,7 +439,7 @@ export function cleanupAllTestArtifacts(): void {
       if (matchesTestPattern(dir)) {
         try {
           fs.rmSync(path.join(componentsDir, dir), { recursive: true, force: true });
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
   }
@@ -451,7 +451,7 @@ export function cleanupAllTestArtifacts(): void {
       if (matchesTestPattern(dir)) {
         try {
           fs.rmSync(path.join(uiDir, dir), { recursive: true, force: true });
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
   }
@@ -463,7 +463,7 @@ export function cleanupAllTestArtifacts(): void {
       if (matchesTestPattern(file)) {
         try {
           fs.unlinkSync(path.join(e2eDir, file));
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
   }
@@ -475,7 +475,7 @@ export function cleanupAllTestArtifacts(): void {
       if (matchesTestPattern(dir)) {
         try {
           fs.rmSync(path.join(unitPagesDir, dir), { recursive: true, force: true });
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
   }
@@ -493,7 +493,7 @@ export function cleanupAllTestArtifacts(): void {
           } else {
             fs.unlinkSync(filePath);
           }
-        } catch (e) { /* ignore */ }
+        } catch { /* ignore */ }
       }
     }
     
@@ -507,7 +507,7 @@ export function cleanupAllTestArtifacts(): void {
             try {
               const filePath = path.join(subdirPath, file);
               fs.unlinkSync(filePath);
-            } catch (e) { /* ignore */ }
+            } catch { /* ignore */ }
           }
         }
       }
@@ -575,7 +575,7 @@ export function cleanupViteConfig(matchesTestPattern: (name: string) => boolean)
       content = content.replace(/\n{3,}/g, '\n\n');
       fs.writeFileSync(viteConfigPath, content);
     }
-  } catch (e) {
+  } catch {
     // Ignore errors during cleanup
   }
 }

@@ -123,6 +123,7 @@ describe('analyze-components script', () => {
       const result = runScript('analyze:components');
       expect(result.success).toBe(true);
       // ANSI escape codes start with \x1b[ or \u001b[
+      // eslint-disable-next-line no-control-regex
       expect(result.output).toMatch(/\x1b\[|\u001b\[/);
     });
   });
@@ -364,7 +365,6 @@ describe('analyze-components script', () => {
   // --- Integration Tests with Test Fixtures ---
   describe('integration with test fixtures', () => {
     let testComponentA: string;
-    let testComponentB: string;
     let pathA: string;
     let pathB: string;
 

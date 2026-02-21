@@ -9,7 +9,6 @@ import {
   cleanupTestArtifacts,
   cleanupAllTestArtifacts,
   getPagePath,
-  getPageComponentPath,
   generateTestName,
   TEST_PREFIX,
   dirExists,
@@ -113,6 +112,7 @@ describe('analyze-pages script', () => {
       const result = runScript('analyze:pages');
       expect(result.success).toBe(true);
       // ANSI escape codes start with \x1b[ or \u001b[
+      // eslint-disable-next-line no-control-regex
       expect(result.output).toMatch(/\x1b\[|\u001b\[/);
     });
 
@@ -222,7 +222,6 @@ describe('analyze-pages script', () => {
 
   // --- Page Analysis Accuracy ---
   describe('page analysis accuracy', () => {
-    let testPageName: string;
     let testPagePath: string;
 
     afterEach(() => {
@@ -339,12 +338,9 @@ describe('analyze-pages script', () => {
   describe('integration with test fixtures', () => {
     let testPageName: string;
     let testPagePath: string;
-    let testSubComponentName: string;
-    let testSubComponentPath: string;
-
     afterEach(() => {
       // Clean up test artifacts
-      const pathsToClean = [testPagePath, testSubComponentPath].filter(Boolean);
+      const pathsToClean = [testPagePath].filter(Boolean);
       if (pathsToClean.length > 0) {
         cleanupTestArtifacts(pathsToClean);
       }

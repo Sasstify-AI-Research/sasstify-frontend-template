@@ -14,11 +14,7 @@ import {
   dirExists,
   fileExists,
   parseJsonOutput,
-  hasDependency,
-  addImportToFile,
 } from './helpers/test-utils';
-import path from 'path';
-import fs from 'fs';
 
 // Type definitions for JSON output
 interface UsedDependency {
@@ -144,6 +140,7 @@ describe('analyze-deps script', () => {
       const result = runScript('analyze:deps');
       expect(result.success).toBe(true);
       // ANSI escape codes start with \x1b[ or \u001b[
+      // eslint-disable-next-line no-control-regex
       expect(result.output).toMatch(/\x1b\[|\u001b\[/);
     });
 
