@@ -7,6 +7,106 @@
 - Run `npm run build` to confirm the production bundle compiles without errors after significant config or source changes.
 - Before committing any changes, audit and update all affected documentation under `docs/` and `README.md` — any change to directory structure, component paths, script behaviour, or page inventory must be reflected in the relevant docs before the commit. Key docs to check: `docs/quick-start/02-project-structure.md`, `docs/scripts/README.md`, `docs/reusable-implementations/`, and `README.md`.
 - Before committing any changes, always generate or update the changelog first — create `changelog/vX.Y.Z.md` following the Keep a Changelog format used in this project, bump the version appropriately (patch for fixes, minor for new features, major for breaking changes), and update `changelog/README.md` to list the new version as the latest release.
+- When asked to create a PR (or "PR message"), always produce the full body using the project PR template below. Fill every section from the actual commits being merged — mark the correct Type of Change checkboxes with `[x]`, list every changed file/area under "Changes Made", pre-fill the Automated Testing checklist based on what was verified, and leave screenshot / performance / breaking-change sections blank only when genuinely not applicable. Never output a partial template.
+
+  ```markdown
+  ## Description
+  <!-- Provide a clear and concise description of what this PR does -->
+
+  ## Related Issue
+  Closes #
+  Fixes #
+  Related to #
+
+  ## Type of Change
+  - [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
+  - [ ] ✨ New feature (non-breaking change that adds functionality)
+  - [ ] 💥 Breaking change (fix or feature that causes existing functionality to not work as expected)
+  - [ ] 📚 Documentation update
+  - [ ] ♻️ Code refactoring (no functional changes)
+  - [ ] ⚡ Performance improvement
+  - [ ] 🧪 Test addition or update
+  - [ ] 🔧 Configuration change
+  - [ ] 🎨 Style/UI change
+
+  ## Changes Made
+  -
+  -
+  -
+
+  ## Testing Performed
+  ### Automated Testing
+  - [ ] `npm run type-check` passes
+  - [ ] `npm run lint` passes
+  - [ ] `npm run build` succeeds
+  - [ ] No new TypeScript errors
+  - [ ] No new ESLint warnings
+
+  ### Manual Testing
+  - [ ] Tested in development (`npm run dev`)
+  - [ ] Tested in production build (`npm run preview`)
+  - [ ] Tested in **Chrome**
+  - [ ] Tested in **Firefox**
+  - [ ] Tested in **Safari**
+  - [ ] Tested on **mobile/tablet** (responsive design)
+  - [ ] Tested keyboard navigation
+  - [ ] Tested with screen reader (if applicable)
+
+  ### Test Scenarios
+  1.
+  2.
+  3.
+
+  ## Screenshots / Videos
+  ### Before
+  ### After
+
+  ## Performance Impact
+  **Bundle size:** Before: / After: / Impact:
+  **Build time:** Before: / After: / Impact:
+  **Runtime performance:** Metrics: / Impact:
+
+  ## Documentation
+  - [ ] Updated component documentation (if new component added)
+  - [ ] Updated README.md (if major feature)
+  - [ ] Updated CHANGELOG.md
+  - [ ] Added code comments for complex logic
+  - [ ] Updated related documentation in `docs/`
+  - [ ] Added JSDoc comments for exported functions/components
+
+  ## Breaking Changes
+  **Breaking changes:** -
+  **Migration guide:** -
+  **Deprecation notices:** -
+
+  ## Checklist
+  - [ ] My code follows the project's [coding standards](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/contributing/README.md#coding-standards)
+  - [ ] I have performed a self-review of my code
+  - [ ] I have commented my code, particularly in hard-to-understand areas
+  - [ ] My changes generate no new warnings or errors
+  - [ ] I have added tests that prove my fix is effective or that my feature works
+  - [ ] New and existing unit tests pass locally with my changes
+  - [ ] Any dependent changes have been merged and published
+  - [ ] My commit messages follow the [commit conventions](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/contributing/02-commit-conventions.md)
+  - [ ] I have updated the documentation accordingly
+  - [ ] My branch is up-to-date with the base branch
+  - [ ] There are no merge conflicts
+
+  ## Additional Notes
+
+  ## For Reviewers
+  **Please pay special attention to:**
+  -
+  -
+  **Questions for reviewers:**
+  -
+  -
+
+  ---
+  **Thank you for contributing!** 🙏
+  Please ensure you've read our [Contributing Guide](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/contributing/README.md) and [Code Review Standards](https://github.com/Sasstify-AI-Research/sasstify-frontend-template/blob/main/docs/contributing/04-code-review.md).
+  ```
+
 - Commit messages must follow Conventional Commits (`docs/contributing/02-commit-conventions.md`). Format: `<type>(<scope>): <subject>` on the first line (max 72 chars), followed by an optional body (wrap at 72 chars) and optional footer for breaking changes or issue refs. Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`. Valid scopes: `components`, `blocks`, `ui`, `pages`, `hooks`, `scripts`, `build`, `config`, `docs`, `tests`, `deps`. For multi-area commits use a multiline body broken into `##` sections (one per area of change) as seen in the project's existing commit history.
 - Use the CLI scripts (`npm run create:page`, `npm run create:block`, `npm run create:component`, `npm run create:ui-component`) for scaffolding — never create or delete page/block/component files manually.
 - Centralise all page copy strings in a `content.ts` file co-located with the page — never hardcode strings directly inside JSX components.
