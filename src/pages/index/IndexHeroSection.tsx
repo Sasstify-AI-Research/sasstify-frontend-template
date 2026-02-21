@@ -52,7 +52,7 @@ export const IndexHeroSection = () => {
 
         <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">79 KB</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">~70 KB</div>
             <div className="text-sm text-gray-600">Initial Bundle</div>
           </div>
           <div className="text-center">

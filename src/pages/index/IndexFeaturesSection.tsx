@@ -23,7 +23,7 @@ const features = [
   {
     icon: <Package className="w-6 h-6" />,
     title: 'Optimized Bundles',
-    description: '~79 KB initial load with vendor code cached long-term. Each page only downloads what it needs.',
+    description: '~70 KB initial page code with vendor chunks cached long-term. Each page only downloads what it needs.',
     color: 'from-purple-400 to-pink-500',
   },
   {
