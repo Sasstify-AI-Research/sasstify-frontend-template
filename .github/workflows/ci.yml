@@ -6,7 +6,9 @@ on:
   pull_request:
     branches: [main]
 
-# Required for GitHub Pages deployment
+# pages: write and id-token: write are only exercised when the deploy job runs.
+# Set the repository variable ENABLE_PAGES_DEPLOY=true to opt-in to deployment.
+# Go to: Settings → Secrets and variables → Actions → Variables → New repository variable
 permissions:
   contents: read
   pages: write
@@ -102,14 +104,21 @@ jobs:
           retention-days: 1
 
   # ─────────────────────────────────────────────
-  # Job 4: Deploy to GitHub Pages
-  # Only runs on push to main (not PRs or forks)
+  # Job 4: Deploy to GitHub Pages  (opt-in)
+  #
+  # Disabled by default. To enable:
+  #   1. Go to repo Settings → Secrets and variables → Actions → Variables
+  #   2. Create a repository variable: ENABLE_PAGES_DEPLOY = true
+  #   3. Enable GitHub Pages: Settings → Pages → Source → GitHub Actions
   # ─────────────────────────────────────────────
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: >
+      github.ref == 'refs/heads/main' &&
+      github.event_name == 'push' &&
+      vars.ENABLE_PAGES_DEPLOY == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
