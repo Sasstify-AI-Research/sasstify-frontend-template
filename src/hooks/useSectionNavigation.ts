@@ -147,7 +147,6 @@ export const useSectionNavigation = ({
     return () => {
       window.removeEventListener('scroll', updateHashFromScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sections, headerOffset, defaultSection, scrollThreshold]);
 
   // Handle hash changes (browser back/forward)

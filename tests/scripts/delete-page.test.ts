@@ -10,7 +10,6 @@ import {
   fileExists,
   dirExists,
   readFile,
-  cleanupTestArtifacts,
   cleanupAllTestArtifacts,
   getPagePath,
   getE2eTestPath,
@@ -24,7 +23,6 @@ import {
   generateTestName,
   toPascalCase,
   TEST_PREFIX,
-  PATHS,
 } from './helpers/test-utils';
 
 describe('delete-page script', () => {
@@ -153,7 +151,7 @@ describe('delete-page script', () => {
     for (const pageName of [...createdPages].reverse()) {
       try {
         runScript('delete:page', `--name=${pageName} --yes`);
-      } catch (e) {
+      } catch {
         // Fallback to direct deletion
         const pagePath = getPagePath(pageName);
         if (dirExists(pagePath)) {
@@ -165,7 +163,7 @@ describe('delete-page script', () => {
     for (const blockName of [...createdBlocks].reverse()) {
       try {
         runScript('delete:block', `--name=${blockName} --yes`);
-      } catch (e) {
+      } catch {
         const blockPath = getBlockComponentPath(blockName);
         if (dirExists(blockPath)) {
           fs.rmSync(blockPath, { recursive: true, force: true });
@@ -176,7 +174,7 @@ describe('delete-page script', () => {
     for (const compName of [...createdComponents].reverse()) {
       try {
         runScript('delete:component', `--name=${compName} --yes`);
-      } catch (e) {
+      } catch {
         const compPath = getComponentPath(compName);
         if (dirExists(compPath)) {
           fs.rmSync(compPath, { recursive: true, force: true });
@@ -187,7 +185,7 @@ describe('delete-page script', () => {
     for (const compName of [...createdUIComponents].reverse()) {
       try {
         runScript('delete:ui-component', `--name=${compName} --yes`);
-      } catch (e) {
+      } catch {
         const compPath = getUIComponentPath(compName);
         if (dirExists(compPath)) {
           fs.rmSync(compPath, { recursive: true, force: true });

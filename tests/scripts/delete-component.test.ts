@@ -10,7 +10,6 @@ import {
   fileExists,
   dirExists,
   readFile,
-  cleanupTestArtifacts,
   cleanupAllTestArtifacts,
   getComponentPath,
   getComponentTestPath,
@@ -1135,9 +1134,10 @@ describe('delete-component script (regular components)', () => {
       const pascalComp1 = toPascalCase(compName1);
       addImportToComponent(compName2, `import ${pascalComp1} from '@/components/${compName1}/${pascalComp1}';`);
       
-      // Try to delete Comp1 (used by Comp2)
+      // Try to delete Comp1 (used by Comp2) — may succeed with a warning or be prevented
       const result1 = runScript('delete:component', `--name=${compName1} --yes`);
-      
+      expect(result1).toBeDefined();
+
       // Delete Comp2 first (not used by anyone)
       const result2 = runScript('delete:component', `--name=${compName2} --yes`);
       expect(result2.success).toBe(true);
